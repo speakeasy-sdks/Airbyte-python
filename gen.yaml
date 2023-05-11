@@ -6,7 +6,7 @@ management:
   generationVersion: 2.26.3
 generation:
   telemetryEnabled: false
-  sdkClassName: airbyte-oss
+  sdkClassName: airbyte
   singleTagPerOp: false
 python:
   version: 1.0.0
