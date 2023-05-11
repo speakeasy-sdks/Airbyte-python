@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install git+https://github.com/speakeasy-sdks/Airbyte-python.git
+pip install git+https://github.com/speakeasy-sdks/airbyte-oss-python.git
 ```
 <!-- End SDK Installation -->
 
