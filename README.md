@@ -11,10 +11,10 @@ pip install git+https://github.com/speakeasy-sdks/airbyte-oss-python.git
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SaveStatsRequestBody(
     attempt_number=548814,

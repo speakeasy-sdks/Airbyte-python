@@ -25,10 +25,10 @@ Creates a custom sourceDefinition for the given workspace
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.CustomSourceDefinitionCreate(
     source_definition=shared.SourceDefinitionCreate(
@@ -82,10 +82,10 @@ Delete a source definition
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceDefinitionIDRequestBody(
     source_definition_id='62550a28-382a-4c48-bafd-2315bba65016',
@@ -104,10 +104,10 @@ Get source
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceDefinitionIDRequestBody(
     source_definition_id='4e06f5bf-6ae5-491b-88bd-ef3612b63c20',
@@ -126,10 +126,10 @@ Get a sourceDefinition that is configured for the given workspace
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceDefinitionIDWithWorkspaceID(
     source_definition_id='5fda8407-74a6-48a9-a35d-086b6f66fef0',
@@ -149,10 +149,10 @@ grant a private, non-custom sourceDefinition to a given workspace
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceDefinitionIDWithWorkspaceID(
     source_definition_id='198258fd-0a9e-4ba4-bf7d-3ef049640d6a',
@@ -172,10 +172,10 @@ Guaranteed to retrieve the latest information on supported sources.
 ### Example Usage
 
 ```python
-import airbyte_oss
+import airbyte
 
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 
 res = s.source_definition.list_latest_source_definitions()
@@ -191,10 +191,10 @@ List all private, non-custom sourceDefinitions, and for each indicate whether th
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WorkspaceIDRequestBody(
     workspace_id='c95ba998-678f-4a3f-a969-91af388ce036',
@@ -213,10 +213,10 @@ List all the sourceDefinitions the current Airbyte deployment is configured to u
 ### Example Usage
 
 ```python
-import airbyte_oss
+import airbyte
 
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 
 res = s.source_definition.list_source_definitions()
@@ -232,10 +232,10 @@ List all the sourceDefinitions the given workspace is configured to use
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WorkspaceIDRequestBody(
     workspace_id='14448c79-77a0-4ef2-b536-028efeef9341',
@@ -254,10 +254,10 @@ revoke a grant to a private, non-custom sourceDefinition from a given workspace
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceDefinitionIDWithWorkspaceID(
     source_definition_id='52ed7e25-3f4c-4157-9eaa-7170f445accf',
@@ -277,10 +277,10 @@ Update a sourceDefinition
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceDefinitionUpdate(
     docker_image_tag='totam',

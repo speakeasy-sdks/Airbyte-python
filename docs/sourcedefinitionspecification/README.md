@@ -15,10 +15,10 @@ Get specification for a SourceDefinition.
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceDefinitionIDWithWorkspaceID(
     source_definition_id='ef890a54-b475-4f16-b56d-385a3c4ac631',

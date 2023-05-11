@@ -18,10 +18,10 @@ Given a destination def ID generate an access/refresh token etc.
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.CompleteDestinationOAuthRequest(
     destination_definition_id='0e115c80-bff9-4185-84ec-42defcce8f19',
@@ -49,10 +49,10 @@ Given a destination connector definition ID, return the URL to the consent scree
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationOauthConsentRequest(
     destination_definition_id='51262438-35bb-4c05-a23a-45cefc5fde10',
@@ -76,10 +76,10 @@ Sets instancewide variables to be used for the oauth flow when creating this des
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SetInstancewideDestinationOauthParamsRequestBody(
     destination_definition_id='ea4c506a-8aa9-44c0-a644-cf5e9d9a4578',

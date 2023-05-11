@@ -26,10 +26,10 @@ Check connection to the source
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceIDRequestBody(
     source_id='02d72165-7650-4664-9870-d9d21f9ad030',
@@ -48,10 +48,10 @@ Check connection for a proposed update to a source
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceUpdate(
     connection_configuration='optio',
@@ -72,10 +72,10 @@ Clone source
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceCloneRequestBody(
     source_clone_id='20a319f4-badf-4947-89a8-67bc42426665',
@@ -98,10 +98,10 @@ Create a source
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceCreate(
     connection_configuration='culpa',
@@ -123,10 +123,10 @@ Delete a source
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceIDRequestBody(
     source_id='9f7f079a-f4d3-4572-8cdb-0f4d281187d5',
@@ -145,10 +145,10 @@ Discover the schema catalog of the source
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceDiscoverSchemaRequestBody(
     connection_id='6844eded-85a9-4065-a628-bdfc2032b6c8',
@@ -170,10 +170,10 @@ Get most recent ActorCatalog for source
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceIDRequestBody(
     source_id='57172305-377d-4cfa-89df-975e35668609',
@@ -192,10 +192,10 @@ Get source
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceIDRequestBody(
     source_id='2e9c3ddc-5f11-41de-a102-6d541a4d190f',
@@ -214,10 +214,10 @@ List sources for workspace. Does not return deleted sources.
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WorkspaceIDRequestBody(
     workspace_id='eb21780b-ccc0-4dbb-9db4-84708fb4e391',
@@ -236,10 +236,10 @@ Search sources
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceSearch(
     connection_configuration='officiis',
@@ -263,10 +263,10 @@ Update a source
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceUpdate(
     connection_configuration='perspiciatis',
@@ -287,10 +287,10 @@ Should only called from worker, to write result from discover activity back to D
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceDiscoverSchemaWriteRequestBody(
     catalog=shared.AirbyteCatalog(

@@ -16,10 +16,10 @@ Check if an operation to be created is valid
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.OperatorConfiguration(
     dbt=shared.OperatorDbt(
@@ -57,10 +57,10 @@ Create an operation to be applied as part of a connection pipeline
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.OperationCreate(
     name='Jay Pagac',
@@ -102,10 +102,10 @@ Delete an operation
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.OperationIDRequestBody(
     operation_id='367fe1a0-cc8d-4f79-b0a3-96d90c364b7c',
@@ -124,10 +124,10 @@ Returns an operation
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.OperationIDRequestBody(
     operation_id='15dfbace-188b-41c4-ae2c-8c6ce611feeb',
@@ -146,10 +146,10 @@ List operations for connection.
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.ConnectionIDRequestBody(
     connection_id='1c7cbdb6-eec7-4437-8ba2-5317747dc915',
@@ -168,10 +168,10 @@ Update an operation
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.OperationUpdate(
     name='Gilberto Corkery',

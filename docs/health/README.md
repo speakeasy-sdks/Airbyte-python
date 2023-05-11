@@ -15,10 +15,10 @@ Health Check
 ### Example Usage
 
 ```python
-import airbyte_oss
+import airbyte
 
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 
 res = s.health.get_health_check()

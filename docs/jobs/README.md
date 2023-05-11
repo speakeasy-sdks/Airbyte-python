@@ -17,10 +17,10 @@ Cancels a job
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.JobIDRequestBody(
     id=685467,
@@ -39,10 +39,10 @@ Get normalization status to determine if we can bypass normalization phase
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.JobIDRequestBody(
     id=943103,
@@ -61,10 +61,10 @@ Gets all information needed to debug this job
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.JobIDRequestBody(
     id=49499,
@@ -83,10 +83,10 @@ Get information about a job
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.JobIDRequestBody(
     id=211301,
@@ -105,10 +105,10 @@ Get information about a job excluding attempt info and logs
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.JobIDRequestBody(
     id=101854,
@@ -125,10 +125,10 @@ if res.job_info_light_read is not None:
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.ConnectionIDRequestBody(
     connection_id='02d514f4-cc6f-418b-b962-1a6a4f77a87e',
@@ -147,10 +147,10 @@ Returns recent jobs for a connection. Jobs are returned in descending order by c
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.JobListRequestBody(
     config_id='earum',

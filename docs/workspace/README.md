@@ -23,10 +23,10 @@ Creates a workspace
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WorkspaceCreate(
     anonymous_data_collection=False,
@@ -98,10 +98,10 @@ Deletes a workspace
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WorkspaceIDRequestBody(
     workspace_id='99731adc-05d8-45ae-adfb-70fb3874290d',
@@ -120,10 +120,10 @@ Find workspace by ID
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WorkspaceIDRequestBody(
     workspace_id='336561ec-a16e-4f89-851b-d76eeeb518c4',
@@ -142,10 +142,10 @@ Find workspace by connection id
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.ConnectionIDRequestBody(
     connection_id='da1fad35-512f-406d-8e5b-72f0f548568a',
@@ -164,10 +164,10 @@ Find workspace by slug
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SlugRequestBody(
     slug='consequatur',
@@ -186,10 +186,10 @@ List all workspaces registered in the current Airbyte deployment
 ### Example Usage
 
 ```python
-import airbyte_oss
+import airbyte
 
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 
 res = s.workspace.list_workspaces()
@@ -205,10 +205,10 @@ Update workspace state
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WorkspaceUpdate(
     anonymous_data_collection=False,
@@ -288,10 +288,10 @@ Update workspace feedback state
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WorkspaceGiveFeedback(
     workspace_id='f4711aa1-bc74-4b86-8ecc-74f77b4848bd',
@@ -310,10 +310,10 @@ Update workspace name
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WorkspaceUpdateName(
     name='Angie Johnston I',

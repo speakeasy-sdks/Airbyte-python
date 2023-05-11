@@ -28,10 +28,10 @@ Fetch the current state type for a connection.
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.ConnectionIDRequestBody(
     connection_id='4444573f-ecd4-4735-bf63-c8209379aa69',
@@ -50,10 +50,10 @@ Returns a summary of source and destination definitions that could be updated.
 ### Example Usage
 
 ```python
-import airbyte_oss
+import airbyte
 
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 
 res = s.web_backend.web_backend_check_updates()
@@ -69,10 +69,10 @@ Create a connection
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WebBackendConnectionCreate(
     destination_id='cd5fbcf7-9da1-48a7-822b-f95894e6861a',
@@ -271,10 +271,10 @@ Get a connection
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WebBackendConnectionRequestBody(
     connection_id='9853e9f5-43d8-4544-b9ee-224460443bc1',
@@ -294,10 +294,10 @@ Returns the current state of a workspace
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WebBackendWorkspaceState(
     workspace_id='54188c2f-56e8-45da-b832-eabd617c3b0d',
@@ -316,10 +316,10 @@ Returns all non-deleted connections for a workspace.
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WebBackendConnectionListRequestBody(
     destination_id=[
@@ -348,10 +348,10 @@ Returns all available geographies in which a data sync can run.
 ### Example Usage
 
 ```python
-import airbyte_oss
+import airbyte
 
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 
 res = s.web_backend.web_backend_list_geographies()
@@ -374,10 +374,10 @@ containing the updated stream needs to be sent.
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WebBackendConnectionUpdate(
     connection_id='c7abf616-ea5c-4716-8193-4b90f2e09d19',
