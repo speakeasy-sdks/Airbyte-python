@@ -4,7 +4,7 @@ generation:
     disableComments: false
     omitDescriptionIfSummaryPresent: false
   baseServerURL: ""
-  sdkClassName: airbyte-test
+  sdkClassName: airbyte-oss
   singleTagPerOp: false
   tagNamespacingDisabled: false
   telemetryEnabled: false
