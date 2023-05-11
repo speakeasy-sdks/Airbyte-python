@@ -16,10 +16,10 @@ Create or update the state for a connection.
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.ConnectionStateCreateOrUpdate(
     connection_id='15ceb4d6-e1ea-4e0f-b5ae-df2acab58b99',
@@ -113,10 +113,10 @@ Fetch the current state for a connection.
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.ConnectionIDRequestBody(
     connection_id='baaf4452-c484-42c9-b2ad-32dafe81a88f',

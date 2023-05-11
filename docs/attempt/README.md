@@ -17,10 +17,10 @@ For worker to set sync stats of a running attempt.
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SaveStatsRequestBody(
     attempt_number=392785,
@@ -74,10 +74,10 @@ For worker to save the AttemptSyncConfig for an attempt.
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SaveAttemptSyncConfigRequestBody(
     attempt_number=639921,
@@ -169,10 +169,10 @@ For worker to register the workflow id in attempt.
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SetWorkflowInAttemptRequestBody(
     attempt_number=359444,

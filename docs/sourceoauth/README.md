@@ -18,10 +18,10 @@ Given a source def ID generate an access/refresh token etc.
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.CompleteSourceOauthRequest(
     o_auth_input_configuration='nam',
@@ -47,10 +47,10 @@ Given a source connector definition ID, return the URL to the consent screen whe
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SourceOauthConsentRequest(
     o_auth_input_configuration='eius',
@@ -74,10 +74,10 @@ Sets instancewide variables to be used for the oauth flow when creating this sou
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.SetInstancewideSourceOauthParamsRequestBody(
     params={

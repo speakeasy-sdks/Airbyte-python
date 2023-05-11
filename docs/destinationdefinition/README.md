@@ -25,10 +25,10 @@ Creates a custom destinationDefinition for the given workspace
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.CustomDestinationDefinitionCreate(
     destination_definition=shared.DestinationDefinitionCreate(
@@ -82,10 +82,10 @@ Delete a destination definition
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationDefinitionIDRequestBody(
     destination_definition_id='c3ca5acf-be2f-4d57-8757-7929177deac6',
@@ -104,10 +104,10 @@ Get destinationDefinition
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationDefinitionIDRequestBody(
     destination_definition_id='46ecb573-409e-43eb-9e5a-2b12eb07f116',
@@ -126,10 +126,10 @@ Get a destinationDefinition that is configured for the given workspace
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationDefinitionIDWithWorkspaceID(
     destination_definition_id='db99545f-c95f-4a88-970e-189dbb30fcb3',
@@ -149,10 +149,10 @@ grant a private, non-custom destinationDefinition to a given workspace
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationDefinitionIDWithWorkspaceID(
     destination_definition_id='48b656bc-db35-4ff2-a4b2-7537a8cd9e73',
@@ -172,10 +172,10 @@ List all the destinationDefinitions the current Airbyte deployment is configured
 ### Example Usage
 
 ```python
-import airbyte_oss
+import airbyte
 
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 
 res = s.destination_definition.list_destination_definitions()
@@ -191,10 +191,10 @@ List all the destinationDefinitions the given workspace is configured to use
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WorkspaceIDRequestBody(
     workspace_id='814d4c98-e0c2-4bb8-9eb7-5dad636c6005',
@@ -213,10 +213,10 @@ Guaranteed to retrieve the latest information on supported destinations.
 ### Example Usage
 
 ```python
-import airbyte_oss
+import airbyte
 
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 
 res = s.destination_definition.list_latest_destination_definitions()
@@ -232,10 +232,10 @@ List all private, non-custom destinationDefinitions, and for each indicate wheth
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WorkspaceIDRequestBody(
     workspace_id='03d8bb31-180f-4739-ae9e-057eb809e281',
@@ -254,10 +254,10 @@ revoke a grant to a private, non-custom destinationDefinition from a given works
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationDefinitionIDWithWorkspaceID(
     destination_definition_id='0331f398-1d4c-4700-b607-f3c93c73b9da',
@@ -277,10 +277,10 @@ Update destinationDefinition
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationDefinitionUpdate(
     destination_definition_id='2e802857-a5b4-4046-ba7d-575f1400e764',

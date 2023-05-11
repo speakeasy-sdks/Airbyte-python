@@ -23,10 +23,10 @@ Check connection to the destination
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationIDRequestBody(
     destination_id='6312fde0-4771-4778-bf61-d017476360a1',
@@ -45,10 +45,10 @@ Check connection for a proposed update to a destination
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationUpdate(
     connection_configuration='nostrum',
@@ -69,10 +69,10 @@ Clone destination
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationCloneRequestBody(
     destination_clone_id='1baa0fe1-ade0-408e-af8c-5f350d8cdb5a',
@@ -95,10 +95,10 @@ Create a destination
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationCreate(
     connection_configuration='consequatur',
@@ -120,10 +120,10 @@ Delete the destination
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationIDRequestBody(
     destination_id='2309fb09-2992-41ae-bb9f-58c4d86e68e4',
@@ -142,10 +142,10 @@ Get configured destination
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationIDRequestBody(
     destination_id='be056013-f59d-4a75-ba59-ecfef66ef1ca',
@@ -164,10 +164,10 @@ List configured destinations for a workspace
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.WorkspaceIDRequestBody(
     workspace_id='a3383c2b-eb47-4737-bc8d-72f64d1db1f2',
@@ -186,10 +186,10 @@ Search destinations
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationSearch(
     connection_configuration='porro',
@@ -213,10 +213,10 @@ Update a destination
 ### Example Usage
 
 ```python
-import airbyte_oss
-from airbyte_oss.models import shared
+import airbyte
+from airbyte.models import shared
 
-s = airbyte_oss.AirbyteOss()
+s = airbyte.Airbyte()
 
 req = shared.DestinationUpdate(
     connection_configuration='ipsa',
