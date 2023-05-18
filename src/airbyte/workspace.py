@@ -28,13 +28,13 @@ class Workspace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/workspaces/create'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -60,13 +60,13 @@ class Workspace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/workspaces/delete'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -94,13 +94,13 @@ class Workspace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/workspaces/get'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -130,13 +130,13 @@ class Workspace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/workspaces/get_by_connection_id'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -166,13 +166,13 @@ class Workspace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/workspaces/get_by_slug'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -202,11 +202,12 @@ class Workspace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/workspaces/list'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('POST', url)
+        http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ListWorkspacesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -224,13 +225,13 @@ class Workspace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/workspaces/update'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -260,13 +261,13 @@ class Workspace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/workspaces/tag_feedback_status_as_done'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -290,13 +291,13 @@ class Workspace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/workspaces/update_name'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         

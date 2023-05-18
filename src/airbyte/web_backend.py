@@ -30,13 +30,13 @@ class WebBackend:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/web_backend/state/get_type'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -66,11 +66,12 @@ class WebBackend:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/web_backend/check_updates'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('POST', url)
+        http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.WebBackendCheckUpdatesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -88,13 +89,13 @@ class WebBackend:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/web_backend/connections/create'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -120,13 +121,13 @@ class WebBackend:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/web_backend/connections/get'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -156,11 +157,11 @@ class WebBackend:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/web_backend/workspace/state'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -190,13 +191,13 @@ class WebBackend:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/web_backend/connections/list'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
@@ -231,11 +232,12 @@ class WebBackend:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/web_backend/geographies/list'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
-        http_res = client.request('POST', url)
+        http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.WebBackendListGeographiesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -261,13 +263,13 @@ class WebBackend:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/web_backend/connections/update'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
         
