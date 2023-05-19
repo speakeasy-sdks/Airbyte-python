@@ -3,6 +3,6 @@
 from __future__ import annotations
 from enum import Enum
 
-class NotificationTypeEnum(str, Enum):
-    SLACK = 'slack'
-    CUSTOMERIO = 'customerio'
+class NonBreakingChangesPreference(str, Enum):
+    IGNORE = 'ignore'
+    DISABLE = 'disable'

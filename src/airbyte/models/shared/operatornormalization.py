@@ -7,7 +7,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Optional
 
-class OperatorNormalizationOptionEnum(str, Enum):
+class OperatorNormalizationOption(str, Enum):
     BASIC = 'basic'
 
 
@@ -15,5 +15,5 @@ class OperatorNormalizationOptionEnum(str, Enum):
 @dataclasses.dataclass
 class OperatorNormalization:
     
-    option: Optional[OperatorNormalizationOptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('option'), 'exclude': lambda f: f is None }})
+    option: Optional[OperatorNormalizationOption] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('option'), 'exclude': lambda f: f is None }})
     

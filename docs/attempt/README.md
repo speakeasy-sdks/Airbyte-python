@@ -129,7 +129,7 @@ req = shared.SaveAttemptSyncConfigRequestBody(
             state={
                 "quo": 'sequi',
             },
-            state_type=shared.ConnectionStateTypeEnum.NOT_SET,
+            state_type=shared.ConnectionStateType.NOT_SET,
             stream_state=[
                 shared.StreamState(
                     stream_descriptor=shared.StreamDescriptor(

@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 from ..shared import airbytecatalog as shared_airbytecatalog
 from ..shared import catalogdiff as shared_catalogdiff
-from ..shared import connectionstatus_enum as shared_connectionstatus_enum
+from ..shared import connectionstatus as shared_connectionstatus
 from ..shared import synchronousjobread as shared_synchronousjobread
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
@@ -23,6 +23,6 @@ class SourceDiscoverSchemaRead:
     catalog_diff: Optional[shared_catalogdiff.CatalogDiff] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('catalogDiff'), 'exclude': lambda f: f is None }})
     r"""Describes the difference between two Airbyte catalogs."""
     catalog_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('catalogId'), 'exclude': lambda f: f is None }})
-    connection_status: Optional[shared_connectionstatus_enum.ConnectionStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionStatus'), 'exclude': lambda f: f is None }})
+    connection_status: Optional[shared_connectionstatus.ConnectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionStatus'), 'exclude': lambda f: f is None }})
     r"""Active means that data is flowing through the connection. Inactive means it is not. Deprecated means the connection is off and cannot be re-activated. the schema field describes the elements of the schema that will be synced."""
     

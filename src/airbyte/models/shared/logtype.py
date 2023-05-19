@@ -3,6 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class SyncModeEnum(str, Enum):
-    FULL_REFRESH = 'full_refresh'
-    INCREMENTAL = 'incremental'
+class LogType(str, Enum):
+    r"""type/source of logs produced"""
+    SERVER = 'server'
+    SCHEDULER = 'scheduler'

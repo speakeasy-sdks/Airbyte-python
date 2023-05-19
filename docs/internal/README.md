@@ -70,7 +70,7 @@ req = shared.ConnectionStateCreateOrUpdate(
             "a": 'animi',
             "maiores": 'itaque',
         },
-        state_type=shared.ConnectionStateTypeEnum.NOT_SET,
+        state_type=shared.ConnectionStateType.NOT_SET,
         stream_state=[
             shared.StreamState(
                 stream_descriptor=shared.StreamDescriptor(
@@ -235,7 +235,7 @@ req = shared.SaveAttemptSyncConfigRequestBody(
                 "non": 'voluptates',
                 "ad": 'aliquam',
             },
-            state_type=shared.ConnectionStateTypeEnum.NOT_SET,
+            state_type=shared.ConnectionStateType.NOT_SET,
             stream_state=[
                 shared.StreamState(
                     stream_descriptor=shared.StreamDescriptor(
@@ -325,7 +325,7 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         'iste',
                         'ullam',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.APPEND_DEDUP,
+                    destination_sync_mode=shared.DestinationSyncMode.APPEND_DEDUP,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -354,7 +354,7 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.INCREMENTAL,
+                    sync_mode=shared.SyncMode.INCREMENTAL,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -391,7 +391,7 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
                     ],
                 ),
             ),
@@ -401,7 +401,7 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                     cursor_field=[
                         'rerum',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.APPEND,
+                    destination_sync_mode=shared.DestinationSyncMode.APPEND,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -427,7 +427,7 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.INCREMENTAL,
+                    sync_mode=shared.SyncMode.INCREMENTAL,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -458,8 +458,8 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.FULL_REFRESH,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.FULL_REFRESH,
                     ],
                 ),
             ),

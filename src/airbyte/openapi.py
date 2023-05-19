@@ -27,6 +27,7 @@ class Openapi:
         
         url = base_url.removesuffix('/') + '/v1/openapi'
         headers = {}
+        headers['Accept'] = 'text/plain'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

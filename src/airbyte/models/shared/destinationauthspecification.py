@@ -8,7 +8,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Optional
 
-class DestinationAuthSpecificationAuthTypeEnum(str, Enum):
+class DestinationAuthSpecificationAuthType(str, Enum):
     OAUTH2_0 = 'oauth2.0'
 
 
@@ -16,7 +16,7 @@ class DestinationAuthSpecificationAuthTypeEnum(str, Enum):
 @dataclasses.dataclass
 class DestinationAuthSpecification:
     
-    auth_type: Optional[DestinationAuthSpecificationAuthTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth_type'), 'exclude': lambda f: f is None }})
+    auth_type: Optional[DestinationAuthSpecificationAuthType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth_type'), 'exclude': lambda f: f is None }})
     oauth2_specification: Optional[shared_oauth2specification.OAuth2Specification] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('oauth2Specification'), 'exclude': lambda f: f is None }})
     r"""An object containing any metadata needed to describe this connector's Oauth flow"""
     

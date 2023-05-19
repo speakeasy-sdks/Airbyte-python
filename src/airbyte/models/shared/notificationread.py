@@ -7,7 +7,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Optional
 
-class NotificationReadStatusEnum(str, Enum):
+class NotificationReadStatus(str, Enum):
     SUCCEEDED = 'succeeded'
     FAILED = 'failed'
 
@@ -17,6 +17,6 @@ class NotificationReadStatusEnum(str, Enum):
 class NotificationRead:
     r"""Successful operation"""
     
-    status: NotificationReadStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    status: NotificationReadStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
     

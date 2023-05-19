@@ -10,7 +10,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Optional
 
-class FieldTransformTransformTypeEnum(str, Enum):
+class FieldTransformTransformType(str, Enum):
     ADD_FIELD = 'add_field'
     REMOVE_FIELD = 'remove_field'
     UPDATE_FIELD_SCHEMA = 'update_field_schema'
@@ -24,7 +24,7 @@ class FieldTransform:
     breaking: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('breaking') }})
     field_name: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fieldName') }})
     r"""A field name is a list of strings that form the path to the field."""
-    transform_type: FieldTransformTransformTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('transformType') }})
+    transform_type: FieldTransformTransformType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('transformType') }})
     add_field: Optional[shared_fieldadd.FieldAdd] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('addField'), 'exclude': lambda f: f is None }})
     remove_field: Optional[shared_fieldremove.FieldRemove] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('removeField'), 'exclude': lambda f: f is None }})
     update_field_schema: Optional[shared_fieldschemaupdate.FieldSchemaUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updateFieldSchema'), 'exclude': lambda f: f is None }})

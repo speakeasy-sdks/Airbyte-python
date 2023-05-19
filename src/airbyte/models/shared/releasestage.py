@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class ReleaseStageEnum(str, Enum):
+class ReleaseStage(str, Enum):
     ALPHA = 'alpha'
     BETA = 'beta'
     GENERALLY_AVAILABLE = 'generally_available'

@@ -21,7 +21,7 @@ req = shared.Notification(
         "explicabo": 'impedit',
         "aliquid": 'quis',
     },
-    notification_type=shared.NotificationTypeEnum.CUSTOMERIO,
+    notification_type=shared.NotificationType.CUSTOMERIO,
     send_on_failure=False,
     send_on_success=False,
     slack_configuration=shared.SlackNotificationConfiguration(

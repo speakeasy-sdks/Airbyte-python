@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import destinationsyncmode_enum as shared_destinationsyncmode_enum
+from ..shared import destinationsyncmode as shared_destinationsyncmode
 from ..shared import selectedfieldinfo as shared_selectedfieldinfo
-from ..shared import syncmode_enum as shared_syncmode_enum
+from ..shared import syncmode as shared_syncmode
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
@@ -15,8 +15,8 @@ from typing import Optional
 class AirbyteStreamConfiguration:
     r"""the mutable part of the stream to configure the destination"""
     
-    destination_sync_mode: shared_destinationsyncmode_enum.DestinationSyncModeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationSyncMode') }})
-    sync_mode: shared_syncmode_enum.SyncModeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('syncMode') }})
+    destination_sync_mode: shared_destinationsyncmode.DestinationSyncMode = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationSyncMode') }})
+    sync_mode: shared_syncmode.SyncMode = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('syncMode') }})
     alias_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('aliasName'), 'exclude': lambda f: f is None }})
     r"""Alias name to the stream to be used in the destination"""
     cursor_field: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cursorField'), 'exclude': lambda f: f is None }})

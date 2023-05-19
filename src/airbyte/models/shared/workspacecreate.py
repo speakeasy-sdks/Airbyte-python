@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import geography_enum as shared_geography_enum
+from ..shared import geography as shared_geography
 from ..shared import notification as shared_notification
 from ..shared import webhookconfigwrite as shared_webhookconfigwrite
 from airbyte import utils
@@ -16,7 +16,7 @@ class WorkspaceCreate:
     
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     anonymous_data_collection: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('anonymousDataCollection'), 'exclude': lambda f: f is None }})
-    default_geography: Optional[shared_geography_enum.GeographyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultGeography'), 'exclude': lambda f: f is None }})
+    default_geography: Optional[shared_geography.Geography] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultGeography'), 'exclude': lambda f: f is None }})
     display_setup_wizard: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('displaySetupWizard'), 'exclude': lambda f: f is None }})
     email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email'), 'exclude': lambda f: f is None }})
     news: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('news'), 'exclude': lambda f: f is None }})

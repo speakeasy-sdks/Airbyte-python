@@ -4,10 +4,10 @@ from __future__ import annotations
 import dataclasses
 from ..shared import connectionschedule as shared_connectionschedule
 from ..shared import connectionscheduledata as shared_connectionscheduledata
-from ..shared import connectionscheduletype_enum as shared_connectionscheduletype_enum
-from ..shared import connectionstatus_enum as shared_connectionstatus_enum
+from ..shared import connectionscheduletype as shared_connectionscheduletype
+from ..shared import connectionstatus as shared_connectionstatus
 from ..shared import destinationsearch as shared_destinationsearch
-from ..shared import namespacedefinitiontype_enum as shared_namespacedefinitiontype_enum
+from ..shared import namespacedefinitiontype as shared_namespacedefinitiontype
 from ..shared import sourcesearch as shared_sourcesearch
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
@@ -22,7 +22,7 @@ class ConnectionSearch:
     destination: Optional[shared_destinationsearch.DestinationSearch] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destination'), 'exclude': lambda f: f is None }})
     destination_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationId'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    namespace_definition: Optional[shared_namespacedefinitiontype_enum.NamespaceDefinitionTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaceDefinition'), 'exclude': lambda f: f is None }})
+    namespace_definition: Optional[shared_namespacedefinitiontype.NamespaceDefinitionType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaceDefinition'), 'exclude': lambda f: f is None }})
     r"""Method used for computing final namespace in destination"""
     namespace_format: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaceFormat'), 'exclude': lambda f: f is None }})
     r"""Used when namespaceDefinition is 'customformat'. If blank then behaves like namespaceDefinition = 'destination'. If \\"${SOURCE_NAMESPACE}\\" then behaves like namespaceDefinition = 'source'."""
@@ -32,10 +32,10 @@ class ConnectionSearch:
     r"""if null, then no schedule is set."""
     schedule_data: Optional[shared_connectionscheduledata.ConnectionScheduleData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleData'), 'exclude': lambda f: f is None }})
     r"""schedule for when the the connection should run, per the schedule type"""
-    schedule_type: Optional[shared_connectionscheduletype_enum.ConnectionScheduleTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleType'), 'exclude': lambda f: f is None }})
+    schedule_type: Optional[shared_connectionscheduletype.ConnectionScheduleType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleType'), 'exclude': lambda f: f is None }})
     r"""determine how the schedule data should be interpreted"""
     source: Optional[shared_sourcesearch.SourceSearch] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source'), 'exclude': lambda f: f is None }})
     source_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceId'), 'exclude': lambda f: f is None }})
-    status: Optional[shared_connectionstatus_enum.ConnectionStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[shared_connectionstatus.ConnectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     r"""Active means that data is flowing through the connection. Inactive means it is not. Deprecated means the connection is off and cannot be re-activated. the schema field describes the elements of the schema that will be synced."""
     

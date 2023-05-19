@@ -5,11 +5,11 @@ import dataclasses
 from ..shared import airbytecatalog as shared_airbytecatalog
 from ..shared import connectionschedule as shared_connectionschedule
 from ..shared import connectionscheduledata as shared_connectionscheduledata
-from ..shared import connectionscheduletype_enum as shared_connectionscheduletype_enum
-from ..shared import connectionstatus_enum as shared_connectionstatus_enum
-from ..shared import geography_enum as shared_geography_enum
-from ..shared import namespacedefinitiontype_enum as shared_namespacedefinitiontype_enum
-from ..shared import nonbreakingchangespreference_enum as shared_nonbreakingchangespreference_enum
+from ..shared import connectionscheduletype as shared_connectionscheduletype
+from ..shared import connectionstatus as shared_connectionstatus
+from ..shared import geography as shared_geography
+from ..shared import namespacedefinitiontype as shared_namespacedefinitiontype
+from ..shared import nonbreakingchangespreference as shared_nonbreakingchangespreference
 from ..shared import resourcerequirements as shared_resourcerequirements
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
@@ -23,14 +23,14 @@ class ConnectionUpdate:
     
     connection_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionId') }})
     breaking_change: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('breakingChange'), 'exclude': lambda f: f is None }})
-    geography: Optional[shared_geography_enum.GeographyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('geography'), 'exclude': lambda f: f is None }})
+    geography: Optional[shared_geography.Geography] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('geography'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     r"""Name that will be set to this connection"""
-    namespace_definition: Optional[shared_namespacedefinitiontype_enum.NamespaceDefinitionTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaceDefinition'), 'exclude': lambda f: f is None }})
+    namespace_definition: Optional[shared_namespacedefinitiontype.NamespaceDefinitionType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaceDefinition'), 'exclude': lambda f: f is None }})
     r"""Method used for computing final namespace in destination"""
     namespace_format: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaceFormat'), 'exclude': lambda f: f is None }})
     r"""Used when namespaceDefinition is 'customformat'. If blank then behaves like namespaceDefinition = 'destination'. If \\"${SOURCE_NAMESPACE}\\" then behaves like namespaceDefinition = 'source'."""
-    non_breaking_changes_preference: Optional[shared_nonbreakingchangespreference_enum.NonBreakingChangesPreferenceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('nonBreakingChangesPreference'), 'exclude': lambda f: f is None }})
+    non_breaking_changes_preference: Optional[shared_nonbreakingchangespreference.NonBreakingChangesPreference] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('nonBreakingChangesPreference'), 'exclude': lambda f: f is None }})
     notify_schema_changes: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('notifySchemaChanges'), 'exclude': lambda f: f is None }})
     operation_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('operationIds'), 'exclude': lambda f: f is None }})
     prefix: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('prefix'), 'exclude': lambda f: f is None }})
@@ -41,10 +41,10 @@ class ConnectionUpdate:
     r"""if null, then no schedule is set."""
     schedule_data: Optional[shared_connectionscheduledata.ConnectionScheduleData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleData'), 'exclude': lambda f: f is None }})
     r"""schedule for when the the connection should run, per the schedule type"""
-    schedule_type: Optional[shared_connectionscheduletype_enum.ConnectionScheduleTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleType'), 'exclude': lambda f: f is None }})
+    schedule_type: Optional[shared_connectionscheduletype.ConnectionScheduleType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleType'), 'exclude': lambda f: f is None }})
     r"""determine how the schedule data should be interpreted"""
     source_catalog_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceCatalogId'), 'exclude': lambda f: f is None }})
-    status: Optional[shared_connectionstatus_enum.ConnectionStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[shared_connectionstatus.ConnectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     r"""Active means that data is flowing through the connection. Inactive means it is not. Deprecated means the connection is off and cannot be re-activated. the schema field describes the elements of the schema that will be synced."""
     sync_catalog: Optional[shared_airbytecatalog.AirbyteCatalog] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('syncCatalog'), 'exclude': lambda f: f is None }})
     r"""describes the available schema (catalog)."""

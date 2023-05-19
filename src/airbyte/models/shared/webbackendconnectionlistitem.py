@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 from ..shared import connectionscheduledata as shared_connectionscheduledata
-from ..shared import connectionscheduletype_enum as shared_connectionscheduletype_enum
-from ..shared import connectionstatus_enum as shared_connectionstatus_enum
+from ..shared import connectionscheduletype as shared_connectionscheduletype
+from ..shared import connectionstatus as shared_connectionstatus
 from ..shared import destinationsnippetread as shared_destinationsnippetread
-from ..shared import jobstatus_enum as shared_jobstatus_enum
-from ..shared import schemachange_enum as shared_schemachange_enum
+from ..shared import jobstatus as shared_jobstatus
+from ..shared import schemachange as shared_schemachange
 from ..shared import sourcesnippetread as shared_sourcesnippetread
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
@@ -23,15 +23,15 @@ class WebBackendConnectionListItem:
     destination: shared_destinationsnippetread.DestinationSnippetRead = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destination') }})
     is_syncing: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isSyncing') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    schema_change: shared_schemachange_enum.SchemaChangeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schemaChange') }})
+    schema_change: shared_schemachange.SchemaChange = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schemaChange') }})
     source: shared_sourcesnippetread.SourceSnippetRead = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source') }})
-    status: shared_connectionstatus_enum.ConnectionStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    status: shared_connectionstatus.ConnectionStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     r"""Active means that data is flowing through the connection. Inactive means it is not. Deprecated means the connection is off and cannot be re-activated. the schema field describes the elements of the schema that will be synced."""
     latest_sync_job_created_at: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('latestSyncJobCreatedAt'), 'exclude': lambda f: f is None }})
     r"""epoch time of the latest sync job. null if no sync job has taken place."""
-    latest_sync_job_status: Optional[shared_jobstatus_enum.JobStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('latestSyncJobStatus'), 'exclude': lambda f: f is None }})
+    latest_sync_job_status: Optional[shared_jobstatus.JobStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('latestSyncJobStatus'), 'exclude': lambda f: f is None }})
     schedule_data: Optional[shared_connectionscheduledata.ConnectionScheduleData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleData'), 'exclude': lambda f: f is None }})
     r"""schedule for when the the connection should run, per the schedule type"""
-    schedule_type: Optional[shared_connectionscheduletype_enum.ConnectionScheduleTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleType'), 'exclude': lambda f: f is None }})
+    schedule_type: Optional[shared_connectionscheduletype.ConnectionScheduleType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleType'), 'exclude': lambda f: f is None }})
     r"""determine how the schedule data should be interpreted"""
     

@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class LogTypeEnum(str, Enum):
-    r"""type/source of logs produced"""
-    SERVER = 'server'
-    SCHEDULER = 'scheduler'
+class Geography(str, Enum):
+    AUTO = 'auto'
+    US = 'us'
+    EU = 'eu'

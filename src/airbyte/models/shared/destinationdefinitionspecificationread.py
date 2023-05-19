@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 from ..shared import advancedauth as shared_advancedauth
 from ..shared import destinationauthspecification as shared_destinationauthspecification
-from ..shared import destinationsyncmode_enum as shared_destinationsyncmode_enum
+from ..shared import destinationsyncmode as shared_destinationsyncmode
 from ..shared import synchronousjobread as shared_synchronousjobread
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
@@ -23,5 +23,5 @@ class DestinationDefinitionSpecificationRead:
     connection_specification: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionSpecification'), 'exclude': lambda f: f is None }})
     r"""The specification for what values are required to configure the destinationDefinition."""
     documentation_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documentationUrl'), 'exclude': lambda f: f is None }})
-    supported_destination_sync_modes: Optional[list[shared_destinationsyncmode_enum.DestinationSyncModeEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('supportedDestinationSyncModes'), 'exclude': lambda f: f is None }})
+    supported_destination_sync_modes: Optional[list[shared_destinationsyncmode.DestinationSyncMode]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('supportedDestinationSyncModes'), 'exclude': lambda f: f is None }})
     

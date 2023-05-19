@@ -303,7 +303,7 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         'eos',
                         'dolorem',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.APPEND_DEDUP,
+                    destination_sync_mode=shared.DestinationSyncMode.APPEND_DEDUP,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -351,7 +351,7 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.INCREMENTAL,
+                    sync_mode=shared.SyncMode.INCREMENTAL,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -377,9 +377,9 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.FULL_REFRESH,
-                        shared.SyncModeEnum.FULL_REFRESH,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.FULL_REFRESH,
+                        shared.SyncMode.FULL_REFRESH,
                     ],
                 ),
             ),
@@ -390,7 +390,7 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         'commodi',
                         'ipsam',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.OVERWRITE,
+                    destination_sync_mode=shared.DestinationSyncMode.OVERWRITE,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -423,7 +423,7 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.INCREMENTAL,
+                    sync_mode=shared.SyncMode.INCREMENTAL,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -447,8 +447,8 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
                     ],
                 ),
             ),
@@ -460,7 +460,7 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         'deserunt',
                         'fugit',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.OVERWRITE,
+                    destination_sync_mode=shared.DestinationSyncMode.OVERWRITE,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -511,7 +511,7 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.FULL_REFRESH,
+                    sync_mode=shared.SyncMode.FULL_REFRESH,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -538,7 +538,7 @@ req = shared.SourceDiscoverSchemaWriteRequestBody(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
                     ],
                 ),
             ),

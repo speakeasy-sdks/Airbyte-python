@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import connectionstatetype_enum as shared_connectionstatetype_enum
+from ..shared import connectionstatetype as shared_connectionstatetype
 from ..shared import invalidinputexceptioninfo as shared_invalidinputexceptioninfo
 from ..shared import notfoundknownexceptioninfo as shared_notfoundknownexceptioninfo
 from typing import Optional
@@ -14,7 +14,7 @@ class GetStateTypeResponse:
     
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
-    connection_state_type: Optional[shared_connectionstatetype_enum.ConnectionStateTypeEnum] = dataclasses.field(default=None)
+    connection_state_type: Optional[shared_connectionstatetype.ConnectionStateType] = dataclasses.field(default=None)
     r"""Successful operation"""
     invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
     r"""Input failed validation"""

@@ -30,11 +30,11 @@ s = airbyte.Airbyte()
 
 req = shared.ConnectionCreate(
     destination_id='b5e6e13b-99d4-488e-9e91-e450ad2abd44',
-    geography=shared.GeographyEnum.AUTO,
+    geography=shared.Geography.AUTO,
     name='Mr. Shelly Lueilwitz',
-    namespace_definition=shared.NamespaceDefinitionTypeEnum.DESTINATION,
+    namespace_definition=shared.NamespaceDefinitionType.DESTINATION,
     namespace_format='${SOURCE_NAMESPACE}',
-    non_breaking_changes_preference=shared.NonBreakingChangesPreferenceEnum.IGNORE,
+    non_breaking_changes_preference=shared.NonBreakingChangesPreference.IGNORE,
     notify_schema_changes=False,
     operation_ids=[
         'a94bb4f6-3c96-49e9-a3ef-a77dfb14cd66',
@@ -47,12 +47,12 @@ req = shared.ConnectionCreate(
         memory_request='enim',
     ),
     schedule=shared.ConnectionSchedule(
-        time_unit=shared.ConnectionScheduleTimeUnitEnum.MONTHS,
+        time_unit=shared.ConnectionScheduleTimeUnit.MONTHS,
         units=965417,
     ),
     schedule_data=shared.ConnectionScheduleData(
         basic_schedule=shared.ConnectionScheduleDataBasicSchedule(
-            time_unit=shared.ConnectionScheduleDataBasicScheduleTimeUnitEnum.WEEKS,
+            time_unit=shared.ConnectionScheduleDataBasicScheduleTimeUnit.WEEKS,
             units=588465,
         ),
         cron=shared.ConnectionScheduleDataCron(
@@ -60,10 +60,10 @@ req = shared.ConnectionCreate(
             cron_time_zone='id',
         ),
     ),
-    schedule_type=shared.ConnectionScheduleTypeEnum.BASIC,
+    schedule_type=shared.ConnectionScheduleType.BASIC,
     source_catalog_id='8f3a6699-7074-4ba4-869b-6e2141959890',
     source_id='afa563e2-516f-4e4c-8b71-1e5b7fd2ed02',
-    status=shared.ConnectionStatusEnum.INACTIVE,
+    status=shared.ConnectionStatus.INACTIVE,
     sync_catalog=shared.AirbyteCatalog(
         streams=[
             shared.AirbyteStreamAndConfiguration(
@@ -72,7 +72,7 @@ req = shared.ConnectionCreate(
                     cursor_field=[
                         'quo',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.APPEND_DEDUP,
+                    destination_sync_mode=shared.DestinationSyncMode.APPEND_DEDUP,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -123,7 +123,7 @@ req = shared.ConnectionCreate(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.INCREMENTAL,
+                    sync_mode=shared.SyncMode.INCREMENTAL,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -162,10 +162,10 @@ req = shared.ConnectionCreate(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
                     ],
                 ),
             ),
@@ -177,7 +177,7 @@ req = shared.ConnectionCreate(
                         'dolorem',
                         'dolorem',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.APPEND,
+                    destination_sync_mode=shared.DestinationSyncMode.APPEND,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -206,7 +206,7 @@ req = shared.ConnectionCreate(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.FULL_REFRESH,
+                    sync_mode=shared.SyncMode.FULL_REFRESH,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -239,7 +239,7 @@ req = shared.ConnectionCreate(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.FULL_REFRESH,
+                        shared.SyncMode.FULL_REFRESH,
                     ],
                 ),
             ),
@@ -252,7 +252,7 @@ req = shared.ConnectionCreate(
                         'suscipit',
                         'deserunt',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.OVERWRITE,
+                    destination_sync_mode=shared.DestinationSyncMode.OVERWRITE,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -299,7 +299,7 @@ req = shared.ConnectionCreate(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.INCREMENTAL,
+                    sync_mode=shared.SyncMode.INCREMENTAL,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -320,7 +320,7 @@ req = shared.ConnectionCreate(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
                     ],
                 ),
             ),
@@ -468,16 +468,16 @@ req = shared.ConnectionSearch(
     ),
     destination_id='efd121aa-6f1e-4674-bdb0-4f15756082d6',
     name='Miss Percy Parisian',
-    namespace_definition=shared.NamespaceDefinitionTypeEnum.SOURCE,
+    namespace_definition=shared.NamespaceDefinitionType.SOURCE,
     namespace_format='${SOURCE_NAMESPACE}',
     prefix='at',
     schedule=shared.ConnectionSchedule(
-        time_unit=shared.ConnectionScheduleTimeUnitEnum.MINUTES,
+        time_unit=shared.ConnectionScheduleTimeUnit.MINUTES,
         units=454162,
     ),
     schedule_data=shared.ConnectionScheduleData(
         basic_schedule=shared.ConnectionScheduleDataBasicSchedule(
-            time_unit=shared.ConnectionScheduleDataBasicScheduleTimeUnitEnum.MINUTES,
+            time_unit=shared.ConnectionScheduleDataBasicScheduleTimeUnit.MINUTES,
             units=326701,
         ),
         cron=shared.ConnectionScheduleDataCron(
@@ -485,7 +485,7 @@ req = shared.ConnectionSearch(
             cron_time_zone='consectetur',
         ),
     ),
-    schedule_type=shared.ConnectionScheduleTypeEnum.MANUAL,
+    schedule_type=shared.ConnectionScheduleType.MANUAL,
     source=shared.SourceSearch(
         connection_configuration='iste',
         name='Ms. Kenneth Ledner',
@@ -495,7 +495,7 @@ req = shared.ConnectionSearch(
         workspace_id='0b375ed4-f6fb-4ee4-9f33-317fe35b60eb',
     ),
     source_id='1ea42655-5ba3-4c28-b44e-d53b88f3a8d8',
-    status=shared.ConnectionStatusEnum.DEPRECATED,
+    status=shared.ConnectionStatus.DEPRECATED,
 )
 
 res = s.connection.search_connections(req)
@@ -545,11 +545,11 @@ s = airbyte.Airbyte()
 req = shared.ConnectionUpdate(
     breaking_change=False,
     connection_id='4294e369-8f44-47f6-83e8-b445e80ca55e',
-    geography=shared.GeographyEnum.EU,
+    geography=shared.Geography.EU,
     name='Martin Beatty',
-    namespace_definition=shared.NamespaceDefinitionTypeEnum.SOURCE,
+    namespace_definition=shared.NamespaceDefinitionType.SOURCE,
     namespace_format='${SOURCE_NAMESPACE}',
-    non_breaking_changes_preference=shared.NonBreakingChangesPreferenceEnum.IGNORE,
+    non_breaking_changes_preference=shared.NonBreakingChangesPreference.IGNORE,
     notify_schema_changes=False,
     operation_ids=[
         '1858b6a8-9fbe-43a5-aa8e-4824d0ab4075',
@@ -565,12 +565,12 @@ req = shared.ConnectionUpdate(
         memory_request='a',
     ),
     schedule=shared.ConnectionSchedule(
-        time_unit=shared.ConnectionScheduleTimeUnitEnum.DAYS,
+        time_unit=shared.ConnectionScheduleTimeUnit.DAYS,
         units=300029,
     ),
     schedule_data=shared.ConnectionScheduleData(
         basic_schedule=shared.ConnectionScheduleDataBasicSchedule(
-            time_unit=shared.ConnectionScheduleDataBasicScheduleTimeUnitEnum.MONTHS,
+            time_unit=shared.ConnectionScheduleDataBasicScheduleTimeUnit.MONTHS,
             units=160467,
         ),
         cron=shared.ConnectionScheduleDataCron(
@@ -578,9 +578,9 @@ req = shared.ConnectionUpdate(
             cron_time_zone='officiis',
         ),
     ),
-    schedule_type=shared.ConnectionScheduleTypeEnum.BASIC,
+    schedule_type=shared.ConnectionScheduleType.BASIC,
     source_catalog_id='73e922a5-7a15-4be3-a060-807e2b6e3ab8',
-    status=shared.ConnectionStatusEnum.INACTIVE,
+    status=shared.ConnectionStatus.INACTIVE,
     sync_catalog=shared.AirbyteCatalog(
         streams=[
             shared.AirbyteStreamAndConfiguration(
@@ -592,7 +592,7 @@ req = shared.ConnectionUpdate(
                         'perspiciatis',
                         'nihil',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.OVERWRITE,
+                    destination_sync_mode=shared.DestinationSyncMode.OVERWRITE,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -628,7 +628,7 @@ req = shared.ConnectionUpdate(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.INCREMENTAL,
+                    sync_mode=shared.SyncMode.INCREMENTAL,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -664,10 +664,10 @@ req = shared.ConnectionUpdate(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
                     ],
                 ),
             ),
@@ -679,7 +679,7 @@ req = shared.ConnectionUpdate(
                         'quis',
                         'inventore',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.APPEND,
+                    destination_sync_mode=shared.DestinationSyncMode.APPEND,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -709,7 +709,7 @@ req = shared.ConnectionUpdate(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.INCREMENTAL,
+                    sync_mode=shared.SyncMode.INCREMENTAL,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -733,8 +733,8 @@ req = shared.ConnectionUpdate(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
                     ],
                 ),
             ),

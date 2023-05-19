@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class OperatorTypeEnum(str, Enum):
-    NORMALIZATION = 'normalization'
-    DBT = 'dbt'
-    WEBHOOK = 'webhook'
+class DestinationSyncMode(str, Enum):
+    APPEND = 'append'
+    OVERWRITE = 'overwrite'
+    APPEND_DEDUP = 'append_dedup'

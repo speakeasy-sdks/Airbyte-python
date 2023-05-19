@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import logtype_enum as shared_logtype_enum
+from ..shared import logtype as shared_logtype
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
 
@@ -11,6 +11,6 @@ from dataclasses_json import Undefined, dataclass_json
 @dataclasses.dataclass
 class LogsRequestBody:
     
-    log_type: shared_logtype_enum.LogTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logType') }})
+    log_type: shared_logtype.LogType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logType') }})
     r"""type/source of logs produced"""
     

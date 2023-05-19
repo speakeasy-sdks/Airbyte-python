@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import syncmode_enum as shared_syncmode_enum
+from ..shared import syncmode as shared_syncmode
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
 from typing import Any, Optional
@@ -25,5 +25,5 @@ class AirbyteStream:
     r"""If the source defines the cursor field, then any other cursor field inputs will be ignored. If it does not, either the user_provided one is used, or the default one is used as a backup."""
     source_defined_primary_key: Optional[list[list[str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceDefinedPrimaryKey'), 'exclude': lambda f: f is None }})
     r"""If the source defines the primary key, paths to the fields that will be used as a primary key. If not provided by the source, the end user will have to specify the primary key themselves."""
-    supported_sync_modes: Optional[list[shared_syncmode_enum.SyncModeEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('supportedSyncModes'), 'exclude': lambda f: f is None }})
+    supported_sync_modes: Optional[list[shared_syncmode.SyncMode]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('supportedSyncModes'), 'exclude': lambda f: f is None }})
     

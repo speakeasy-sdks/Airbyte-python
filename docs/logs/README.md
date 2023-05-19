@@ -17,7 +17,7 @@ from airbyte.models import shared
 s = airbyte.Airbyte()
 
 req = shared.LogsRequestBody(
-    log_type=shared.LogTypeEnum.SERVER,
+    log_type=shared.LogType.SERVER,
 )
 
 res = s.logs.get_logs(req)

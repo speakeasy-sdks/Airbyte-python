@@ -7,7 +7,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Optional
 
-class ConnectionScheduleDataBasicScheduleTimeUnitEnum(str, Enum):
+class ConnectionScheduleDataBasicScheduleTimeUnit(str, Enum):
     MINUTES = 'minutes'
     HOURS = 'hours'
     DAYS = 'days'
@@ -19,7 +19,7 @@ class ConnectionScheduleDataBasicScheduleTimeUnitEnum(str, Enum):
 @dataclasses.dataclass
 class ConnectionScheduleDataBasicSchedule:
     
-    time_unit: ConnectionScheduleDataBasicScheduleTimeUnitEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timeUnit') }})
+    time_unit: ConnectionScheduleDataBasicScheduleTimeUnit = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timeUnit') }})
     units: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('units') }})
     
 

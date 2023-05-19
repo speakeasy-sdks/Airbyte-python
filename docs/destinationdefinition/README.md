@@ -46,7 +46,7 @@ req = shared.CustomDestinationDefinitionCreate(
             ),
             job_specific=[
                 shared.JobTypeResourceLimit(
-                    job_type=shared.JobTypeEnum.RESET_CONNECTION,
+                    job_type=shared.JobType.RESET_CONNECTION,
                     resource_requirements=shared.ResourceRequirements(
                         cpu_limit='quis',
                         cpu_request='beatae',
@@ -55,7 +55,7 @@ req = shared.CustomDestinationDefinitionCreate(
                     ),
                 ),
                 shared.JobTypeResourceLimit(
-                    job_type=shared.JobTypeEnum.REPLICATE,
+                    job_type=shared.JobType.REPLICATE,
                     resource_requirements=shared.ResourceRequirements(
                         cpu_limit='cupiditate',
                         cpu_request='fugit',
@@ -294,7 +294,7 @@ req = shared.DestinationDefinitionUpdate(
         ),
         job_specific=[
             shared.JobTypeResourceLimit(
-                job_type=shared.JobTypeEnum.REPLICATE,
+                job_type=shared.JobType.REPLICATE,
                 resource_requirements=shared.ResourceRequirements(
                     cpu_limit='minus',
                     cpu_request='sunt',
@@ -303,7 +303,7 @@ req = shared.DestinationDefinitionUpdate(
                 ),
             ),
             shared.JobTypeResourceLimit(
-                job_type=shared.JobTypeEnum.SYNC,
+                job_type=shared.JobType.SYNC,
                 resource_requirements=shared.ResourceRequirements(
                     cpu_limit='et',
                     cpu_request='facilis',

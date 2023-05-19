@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class ConnectionStateTypeEnum(str, Enum):
+class ConnectionStateType(str, Enum):
     r"""Successful operation"""
     GLOBAL = 'global'
     STREAM = 'stream'

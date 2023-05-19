@@ -17,7 +17,7 @@ class OperatorWebhookDbtCloud:
     job_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('jobId') }})
     r"""The job id associated with the job"""
     
-class OperatorWebhookWebhookTypeEnum(str, Enum):
+class OperatorWebhookWebhookType(str, Enum):
     DBT_CLOUD = 'dbtCloud'
 
 
@@ -32,5 +32,5 @@ class OperatorWebhook:
     r"""DEPRECATED. Populate dbtCloud instead."""
     webhook_config_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhookConfigId'), 'exclude': lambda f: f is None }})
     r"""The id of the webhook configs to use from the workspace."""
-    webhook_type: Optional[OperatorWebhookWebhookTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhookType'), 'exclude': lambda f: f is None }})
+    webhook_type: Optional[OperatorWebhookWebhookType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhookType'), 'exclude': lambda f: f is None }})
     

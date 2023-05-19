@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import geography_enum as shared_geography_enum
+from ..shared import geography as shared_geography
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
 
@@ -12,5 +12,5 @@ from dataclasses_json import Undefined, dataclass_json
 class WebBackendGeographiesListResult:
     r"""Successful operation"""
     
-    geographies: list[shared_geography_enum.GeographyEnum] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('geographies') }})
+    geographies: list[shared_geography.Geography] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('geographies') }})
     

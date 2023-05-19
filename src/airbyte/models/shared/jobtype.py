@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class JobTypeEnum(str, Enum):
+class JobType(str, Enum):
     r"""enum that describes the different types of jobs that the platform runs."""
     GET_SPEC = 'get_spec'
     CHECK_CONNECTION = 'check_connection'

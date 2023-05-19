@@ -76,7 +76,7 @@ req = shared.ConnectionStateCreateOrUpdate(
         state={
             "accusamus": 'quod',
         },
-        state_type=shared.ConnectionStateTypeEnum.GLOBAL,
+        state_type=shared.ConnectionStateType.GLOBAL,
         stream_state=[
             shared.StreamState(
                 stream_descriptor=shared.StreamDescriptor(

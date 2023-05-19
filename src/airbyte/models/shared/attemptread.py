@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 from ..shared import attemptfailuresummary as shared_attemptfailuresummary
 from ..shared import attemptstats as shared_attemptstats
-from ..shared import attemptstatus_enum as shared_attemptstatus_enum
+from ..shared import attemptstatus as shared_attemptstatus
 from ..shared import attemptstreamstats as shared_attemptstreamstats
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
@@ -17,7 +17,7 @@ class AttemptRead:
     
     created_at: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
-    status: shared_attemptstatus_enum.AttemptStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    status: shared_attemptstatus.AttemptStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     updated_at: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
     bytes_synced: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bytesSynced'), 'exclude': lambda f: f is None }})
     ended_at: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endedAt'), 'exclude': lambda f: f is None }})

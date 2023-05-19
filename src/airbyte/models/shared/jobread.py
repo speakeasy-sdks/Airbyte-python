@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import jobconfigtype_enum as shared_jobconfigtype_enum
-from ..shared import jobstatus_enum as shared_jobstatus_enum
+from ..shared import jobconfigtype as shared_jobconfigtype
+from ..shared import jobstatus as shared_jobstatus
 from ..shared import resetconfig as shared_resetconfig
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
@@ -15,10 +15,10 @@ from typing import Optional
 class JobRead:
     
     config_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configId') }})
-    config_type: shared_jobconfigtype_enum.JobConfigTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configType') }})
+    config_type: shared_jobconfigtype.JobConfigType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configType') }})
     created_at: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
-    status: shared_jobstatus_enum.JobStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    status: shared_jobstatus.JobStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     updated_at: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updatedAt') }})
     reset_config: Optional[shared_resetconfig.ResetConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resetConfig'), 'exclude': lambda f: f is None }})
     r"""contains information about how a reset was configured. only populated if the job was a reset."""

@@ -46,7 +46,7 @@ req = shared.CustomSourceDefinitionCreate(
             ),
             job_specific=[
                 shared.JobTypeResourceLimit(
-                    job_type=shared.JobTypeEnum.REPLICATE,
+                    job_type=shared.JobType.REPLICATE,
                     resource_requirements=shared.ResourceRequirements(
                         cpu_limit='facilis',
                         cpu_request='cupiditate',
@@ -55,7 +55,7 @@ req = shared.CustomSourceDefinitionCreate(
                     ),
                 ),
                 shared.JobTypeResourceLimit(
-                    job_type=shared.JobTypeEnum.DISCOVER_SCHEMA,
+                    job_type=shared.JobType.DISCOVER_SCHEMA,
                     resource_requirements=shared.ResourceRequirements(
                         cpu_limit='provident',
                         cpu_request='amet',
@@ -293,7 +293,7 @@ req = shared.SourceDefinitionUpdate(
         ),
         job_specific=[
             shared.JobTypeResourceLimit(
-                job_type=shared.JobTypeEnum.DISCOVER_SCHEMA,
+                job_type=shared.JobType.DISCOVER_SCHEMA,
                 resource_requirements=shared.ResourceRequirements(
                     cpu_limit='odio',
                     cpu_request='delectus',
@@ -302,7 +302,7 @@ req = shared.SourceDefinitionUpdate(
                 ),
             ),
             shared.JobTypeResourceLimit(
-                job_type=shared.JobTypeEnum.CONNECTION_UPDATER,
+                job_type=shared.JobType.CONNECTION_UPDATER,
                 resource_requirements=shared.ResourceRequirements(
                     cpu_limit='eius',
                     cpu_request='eos',
@@ -311,7 +311,7 @@ req = shared.SourceDefinitionUpdate(
                 ),
             ),
             shared.JobTypeResourceLimit(
-                job_type=shared.JobTypeEnum.RESET_CONNECTION,
+                job_type=shared.JobType.RESET_CONNECTION,
                 resource_requirements=shared.ResourceRequirements(
                     cpu_limit='occaecati',
                     cpu_request='debitis',

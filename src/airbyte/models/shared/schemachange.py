@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class AttemptStatusEnum(str, Enum):
-    RUNNING = 'running'
-    FAILED = 'failed'
-    SUCCEEDED = 'succeeded'
+class SchemaChange(str, Enum):
+    NO_CHANGE = 'no_change'
+    NON_BREAKING = 'non_breaking'
+    BREAKING = 'breaking'

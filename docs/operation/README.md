@@ -29,9 +29,9 @@ req = shared.OperatorConfiguration(
         git_repo_url='praesentium',
     ),
     normalization=shared.OperatorNormalization(
-        option=shared.OperatorNormalizationOptionEnum.BASIC,
+        option=shared.OperatorNormalizationOption.BASIC,
     ),
-    operator_type=shared.OperatorTypeEnum.WEBHOOK,
+    operator_type=shared.OperatorType.WEBHOOK,
     webhook=shared.OperatorWebhook(
         dbt_cloud=shared.OperatorWebhookDbtCloud(
             account_id=221781,
@@ -40,7 +40,7 @@ req = shared.OperatorConfiguration(
         execution_body='libero',
         execution_url='iste',
         webhook_config_id='1c8d975e-0e84-419d-8f84-f144f3e07edc',
-        webhook_type=shared.OperatorWebhookWebhookTypeEnum.DBT_CLOUD,
+        webhook_type=shared.OperatorWebhookWebhookType.DBT_CLOUD,
     ),
 )
 
@@ -72,9 +72,9 @@ req = shared.OperationCreate(
             git_repo_url='laborum',
         ),
         normalization=shared.OperatorNormalization(
-            option=shared.OperatorNormalizationOptionEnum.BASIC,
+            option=shared.OperatorNormalizationOption.BASIC,
         ),
-        operator_type=shared.OperatorTypeEnum.WEBHOOK,
+        operator_type=shared.OperatorType.WEBHOOK,
         webhook=shared.OperatorWebhook(
             dbt_cloud=shared.OperatorWebhookDbtCloud(
                 account_id=842974,
@@ -83,7 +83,7 @@ req = shared.OperationCreate(
             execution_body='aut',
             execution_url='ipsam',
             webhook_config_id='a972e056-7282-427b-ad30-9470bf7a4fa8',
-            webhook_type=shared.OperatorWebhookWebhookTypeEnum.DBT_CLOUD,
+            webhook_type=shared.OperatorWebhookWebhookType.DBT_CLOUD,
         ),
     ),
     workspace_id='7cf535a6-fae5-44eb-b60c-321f023b75d2',
@@ -184,9 +184,9 @@ req = shared.OperationUpdate(
             git_repo_url='corporis',
         ),
         normalization=shared.OperatorNormalization(
-            option=shared.OperatorNormalizationOptionEnum.BASIC,
+            option=shared.OperatorNormalizationOption.BASIC,
         ),
-        operator_type=shared.OperatorTypeEnum.DBT,
+        operator_type=shared.OperatorType.DBT,
         webhook=shared.OperatorWebhook(
             dbt_cloud=shared.OperatorWebhookDbtCloud(
                 account_id=435142,
@@ -195,7 +195,7 @@ req = shared.OperationUpdate(
             execution_body='provident',
             execution_url='laudantium',
             webhook_config_id='b5555408-0d40-4bca-8c6c-bd6b5f3ec909',
-            webhook_type=shared.OperatorWebhookWebhookTypeEnum.DBT_CLOUD,
+            webhook_type=shared.OperatorWebhookWebhookType.DBT_CLOUD,
         ),
     ),
 )

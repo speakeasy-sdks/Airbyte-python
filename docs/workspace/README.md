@@ -30,7 +30,7 @@ s = airbyte.Airbyte()
 
 req = shared.WorkspaceCreate(
     anonymous_data_collection=False,
-    default_geography=shared.GeographyEnum.AUTO,
+    default_geography=shared.Geography.AUTO,
     display_setup_wizard=False,
     email='Franco30@yahoo.com',
     name='Luz Hudson',
@@ -42,7 +42,7 @@ req = shared.WorkspaceCreate(
                 "doloremque": 'officiis',
                 "nisi": 'reprehenderit',
             },
-            notification_type=shared.NotificationTypeEnum.CUSTOMERIO,
+            notification_type=shared.NotificationType.CUSTOMERIO,
             send_on_failure=False,
             send_on_success=False,
             slack_configuration=shared.SlackNotificationConfiguration(
@@ -55,7 +55,7 @@ req = shared.WorkspaceCreate(
                 "facere": 'tenetur',
                 "saepe": 'assumenda',
             },
-            notification_type=shared.NotificationTypeEnum.SLACK,
+            notification_type=shared.NotificationType.SLACK,
             send_on_failure=False,
             send_on_success=False,
             slack_configuration=shared.SlackNotificationConfiguration(
@@ -67,7 +67,7 @@ req = shared.WorkspaceCreate(
                 "sit": 'recusandae',
                 "a": 'exercitationem',
             },
-            notification_type=shared.NotificationTypeEnum.SLACK,
+            notification_type=shared.NotificationType.SLACK,
             send_on_failure=False,
             send_on_success=False,
             slack_configuration=shared.SlackNotificationConfiguration(
@@ -212,7 +212,7 @@ s = airbyte.Airbyte()
 
 req = shared.WorkspaceUpdate(
     anonymous_data_collection=False,
-    default_geography=shared.GeographyEnum.AUTO,
+    default_geography=shared.Geography.AUTO,
     display_setup_wizard=False,
     email='Effie2@gmail.com',
     initial_setup_complete=False,
@@ -222,7 +222,7 @@ req = shared.WorkspaceUpdate(
             customerio_configuration={
                 "quibusdam": 'autem',
             },
-            notification_type=shared.NotificationTypeEnum.CUSTOMERIO,
+            notification_type=shared.NotificationType.CUSTOMERIO,
             send_on_failure=False,
             send_on_success=False,
             slack_configuration=shared.SlackNotificationConfiguration(
@@ -235,7 +235,7 @@ req = shared.WorkspaceUpdate(
                 "aliquam": 'ea',
                 "aliquam": 'corporis',
             },
-            notification_type=shared.NotificationTypeEnum.CUSTOMERIO,
+            notification_type=shared.NotificationType.CUSTOMERIO,
             send_on_failure=False,
             send_on_success=False,
             slack_configuration=shared.SlackNotificationConfiguration(
@@ -246,7 +246,7 @@ req = shared.WorkspaceUpdate(
             customerio_configuration={
                 "aut": 'molestias',
             },
-            notification_type=shared.NotificationTypeEnum.SLACK,
+            notification_type=shared.NotificationType.SLACK,
             send_on_failure=False,
             send_on_success=False,
             slack_configuration=shared.SlackNotificationConfiguration(

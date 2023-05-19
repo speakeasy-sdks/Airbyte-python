@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class AttemptFailureOriginEnum(str, Enum):
+class AttemptFailureOrigin(str, Enum):
     r"""Indicates where the error originated. If not set, the origin of error is not well known."""
     SOURCE = 'source'
     DESTINATION = 'destination'

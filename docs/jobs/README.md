@@ -155,7 +155,7 @@ s = airbyte.Airbyte()
 req = shared.JobListRequestBody(
     config_id='earum',
     config_types=[
-        shared.JobConfigTypeEnum.RESET_CONNECTION,
+        shared.JobConfigType.RESET_CONNECTION,
     ],
     including_job_id=263346,
     pagination=shared.Pagination(

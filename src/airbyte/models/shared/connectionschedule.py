@@ -6,7 +6,7 @@ from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 
-class ConnectionScheduleTimeUnitEnum(str, Enum):
+class ConnectionScheduleTimeUnit(str, Enum):
     MINUTES = 'minutes'
     HOURS = 'hours'
     DAYS = 'days'
@@ -19,6 +19,6 @@ class ConnectionScheduleTimeUnitEnum(str, Enum):
 class ConnectionSchedule:
     r"""if null, then no schedule is set."""
     
-    time_unit: ConnectionScheduleTimeUnitEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timeUnit') }})
+    time_unit: ConnectionScheduleTimeUnit = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timeUnit') }})
     units: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('units') }})
     

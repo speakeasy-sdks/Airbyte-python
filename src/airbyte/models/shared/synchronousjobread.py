@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import jobconfigtype_enum as shared_jobconfigtype_enum
+from ..shared import jobconfigtype as shared_jobconfigtype
 from ..shared import logread as shared_logread
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
@@ -13,7 +13,7 @@ from typing import Optional
 @dataclasses.dataclass
 class SynchronousJobRead:
     
-    config_type: shared_jobconfigtype_enum.JobConfigTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configType') }})
+    config_type: shared_jobconfigtype.JobConfigType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configType') }})
     created_at: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     ended_at: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endedAt') }})
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})

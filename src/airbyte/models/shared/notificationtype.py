@@ -3,7 +3,6 @@
 from __future__ import annotations
 from enum import Enum
 
-class DestinationSyncModeEnum(str, Enum):
-    APPEND = 'append'
-    OVERWRITE = 'overwrite'
-    APPEND_DEDUP = 'append_dedup'
+class NotificationType(str, Enum):
+    SLACK = 'slack'
+    CUSTOMERIO = 'customerio'

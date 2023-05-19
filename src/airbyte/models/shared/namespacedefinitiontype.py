@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class NamespaceDefinitionTypeEnum(str, Enum):
+class NamespaceDefinitionType(str, Enum):
     r"""Method used for computing final namespace in destination"""
     SOURCE = 'source'
     DESTINATION = 'destination'

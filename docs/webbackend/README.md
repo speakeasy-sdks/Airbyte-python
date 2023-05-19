@@ -76,11 +76,11 @@ s = airbyte.Airbyte()
 
 req = shared.WebBackendConnectionCreate(
     destination_id='cd5fbcf7-9da1-48a7-822b-f95894e6861a',
-    geography=shared.GeographyEnum.EU,
+    geography=shared.Geography.EU,
     name='Pedro Haley',
-    namespace_definition=shared.NamespaceDefinitionTypeEnum.CUSTOMFORMAT,
+    namespace_definition=shared.NamespaceDefinitionType.CUSTOMFORMAT,
     namespace_format='${SOURCE_NAMESPACE}',
-    non_breaking_changes_preference=shared.NonBreakingChangesPreferenceEnum.IGNORE,
+    non_breaking_changes_preference=shared.NonBreakingChangesPreference.IGNORE,
     operation_ids=[
         '751c9fe8-f750-42bf-9c34-50841f176445',
         '6379f3fb-27e2-41f8-a265-7b36fc6b9f58',
@@ -98,9 +98,9 @@ req = shared.WebBackendConnectionCreate(
                     git_repo_url='aut',
                 ),
                 normalization=shared.OperatorNormalization(
-                    option=shared.OperatorNormalizationOptionEnum.BASIC,
+                    option=shared.OperatorNormalizationOption.BASIC,
                 ),
-                operator_type=shared.OperatorTypeEnum.NORMALIZATION,
+                operator_type=shared.OperatorType.NORMALIZATION,
                 webhook=shared.OperatorWebhook(
                     dbt_cloud=shared.OperatorWebhookDbtCloud(
                         account_id=611485,
@@ -109,7 +109,7 @@ req = shared.WebBackendConnectionCreate(
                     execution_body='repellat',
                     execution_url='voluptatum',
                     webhook_config_id='d29de1dd-7097-4b5d-a08c-57fa6c78a216',
-                    webhook_type=shared.OperatorWebhookWebhookTypeEnum.DBT_CLOUD,
+                    webhook_type=shared.OperatorWebhookWebhookType.DBT_CLOUD,
                 ),
             ),
             workspace_id='e19bafec-a619-4149-8140-b64ff8ae170e',
@@ -124,9 +124,9 @@ req = shared.WebBackendConnectionCreate(
                     git_repo_url='recusandae',
                 ),
                 normalization=shared.OperatorNormalization(
-                    option=shared.OperatorNormalizationOptionEnum.BASIC,
+                    option=shared.OperatorNormalizationOption.BASIC,
                 ),
-                operator_type=shared.OperatorTypeEnum.NORMALIZATION,
+                operator_type=shared.OperatorType.NORMALIZATION,
                 webhook=shared.OperatorWebhook(
                     dbt_cloud=shared.OperatorWebhookDbtCloud(
                         account_id=652013,
@@ -135,7 +135,7 @@ req = shared.WebBackendConnectionCreate(
                     execution_body='blanditiis',
                     execution_url='suscipit',
                     webhook_config_id='85559667-32aa-45dc-b668-2cb70f8cfd5f',
-                    webhook_type=shared.OperatorWebhookWebhookTypeEnum.DBT_CLOUD,
+                    webhook_type=shared.OperatorWebhookWebhookType.DBT_CLOUD,
                 ),
             ),
             workspace_id='b6e91b9a-9f74-4846-a2c3-309db0536d9e',
@@ -149,12 +149,12 @@ req = shared.WebBackendConnectionCreate(
         memory_request='consequatur',
     ),
     schedule=shared.ConnectionSchedule(
-        time_unit=shared.ConnectionScheduleTimeUnitEnum.MINUTES,
+        time_unit=shared.ConnectionScheduleTimeUnit.MINUTES,
         units=434632,
     ),
     schedule_data=shared.ConnectionScheduleData(
         basic_schedule=shared.ConnectionScheduleDataBasicSchedule(
-            time_unit=shared.ConnectionScheduleDataBasicScheduleTimeUnitEnum.MONTHS,
+            time_unit=shared.ConnectionScheduleDataBasicScheduleTimeUnit.MONTHS,
             units=337581,
         ),
         cron=shared.ConnectionScheduleDataCron(
@@ -162,10 +162,10 @@ req = shared.WebBackendConnectionCreate(
             cron_time_zone='omnis',
         ),
     ),
-    schedule_type=shared.ConnectionScheduleTypeEnum.MANUAL,
+    schedule_type=shared.ConnectionScheduleType.MANUAL,
     source_catalog_id='c11a25a8-bf92-4f97-828a-d9a9f8bf8221',
     source_id='125359d9-8387-4f7a-b9cd-72cd2484da21',
-    status=shared.ConnectionStatusEnum.INACTIVE,
+    status=shared.ConnectionStatus.INACTIVE,
     sync_catalog=shared.AirbyteCatalog(
         streams=[
             shared.AirbyteStreamAndConfiguration(
@@ -177,7 +177,7 @@ req = shared.WebBackendConnectionCreate(
                         'eligendi',
                         'numquam',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.APPEND,
+                    destination_sync_mode=shared.DestinationSyncMode.APPEND,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -226,7 +226,7 @@ req = shared.WebBackendConnectionCreate(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.INCREMENTAL,
+                    sync_mode=shared.SyncMode.INCREMENTAL,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -250,7 +250,7 @@ req = shared.WebBackendConnectionCreate(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
                     ],
                 ),
             ),
@@ -381,11 +381,11 @@ s = airbyte.Airbyte()
 
 req = shared.WebBackendConnectionUpdate(
     connection_id='c7abf616-ea5c-4716-8193-4b90f2e09d19',
-    geography=shared.GeographyEnum.EU,
+    geography=shared.Geography.EU,
     name='Dr. Lorene Runte',
-    namespace_definition=shared.NamespaceDefinitionTypeEnum.CUSTOMFORMAT,
+    namespace_definition=shared.NamespaceDefinitionType.CUSTOMFORMAT,
     namespace_format='${SOURCE_NAMESPACE}',
-    non_breaking_changes_preference=shared.NonBreakingChangesPreferenceEnum.IGNORE,
+    non_breaking_changes_preference=shared.NonBreakingChangesPreference.IGNORE,
     notify_schema_changes=False,
     operations=[
         shared.WebBackendOperationCreateOrUpdate(
@@ -399,9 +399,9 @@ req = shared.WebBackendConnectionUpdate(
                     git_repo_url='excepturi',
                 ),
                 normalization=shared.OperatorNormalization(
-                    option=shared.OperatorNormalizationOptionEnum.BASIC,
+                    option=shared.OperatorNormalizationOption.BASIC,
                 ),
-                operator_type=shared.OperatorTypeEnum.NORMALIZATION,
+                operator_type=shared.OperatorType.NORMALIZATION,
                 webhook=shared.OperatorWebhook(
                     dbt_cloud=shared.OperatorWebhookDbtCloud(
                         account_id=139505,
@@ -410,7 +410,7 @@ req = shared.WebBackendConnectionUpdate(
                     execution_body='maxime',
                     execution_url='excepturi',
                     webhook_config_id='ff57491a-abfa-42e7-a1f0-ca4d456ef103',
-                    webhook_type=shared.OperatorWebhookWebhookTypeEnum.DBT_CLOUD,
+                    webhook_type=shared.OperatorWebhookWebhookType.DBT_CLOUD,
                 ),
             ),
             workspace_id='1e6899f0-c200-41e2-acd5-5cc0584a184d',
@@ -426,9 +426,9 @@ req = shared.WebBackendConnectionUpdate(
                     git_repo_url='sed',
                 ),
                 normalization=shared.OperatorNormalization(
-                    option=shared.OperatorNormalizationOptionEnum.BASIC,
+                    option=shared.OperatorNormalizationOption.BASIC,
                 ),
-                operator_type=shared.OperatorTypeEnum.DBT,
+                operator_type=shared.OperatorType.DBT,
                 webhook=shared.OperatorWebhook(
                     dbt_cloud=shared.OperatorWebhookDbtCloud(
                         account_id=803763,
@@ -437,7 +437,7 @@ req = shared.WebBackendConnectionUpdate(
                     execution_body='quibusdam',
                     execution_url='facere',
                     webhook_config_id='db46aa1c-fd6d-4828-9a01-319112964664',
-                    webhook_type=shared.OperatorWebhookWebhookTypeEnum.DBT_CLOUD,
+                    webhook_type=shared.OperatorWebhookWebhookType.DBT_CLOUD,
                 ),
             ),
             workspace_id='5c1d81f2-9042-4f56-9b7a-ff0ea2216cbe',
@@ -453,9 +453,9 @@ req = shared.WebBackendConnectionUpdate(
                     git_repo_url='blanditiis',
                 ),
                 normalization=shared.OperatorNormalization(
-                    option=shared.OperatorNormalizationOptionEnum.BASIC,
+                    option=shared.OperatorNormalizationOption.BASIC,
                 ),
-                operator_type=shared.OperatorTypeEnum.NORMALIZATION,
+                operator_type=shared.OperatorType.NORMALIZATION,
                 webhook=shared.OperatorWebhook(
                     dbt_cloud=shared.OperatorWebhookDbtCloud(
                         account_id=259019,
@@ -464,7 +464,7 @@ req = shared.WebBackendConnectionUpdate(
                     execution_body='nisi',
                     execution_url='placeat',
                     webhook_config_id='bdeecf6b-99bc-4635-a2eb-fdf55c294c06',
-                    webhook_type=shared.OperatorWebhookWebhookTypeEnum.DBT_CLOUD,
+                    webhook_type=shared.OperatorWebhookWebhookType.DBT_CLOUD,
                 ),
             ),
             workspace_id='0b06a128-7764-4eef-ad0c-6d6ed9c73dd6',
@@ -480,9 +480,9 @@ req = shared.WebBackendConnectionUpdate(
                     git_repo_url='repellat',
                 ),
                 normalization=shared.OperatorNormalization(
-                    option=shared.OperatorNormalizationOptionEnum.BASIC,
+                    option=shared.OperatorNormalizationOption.BASIC,
                 ),
-                operator_type=shared.OperatorTypeEnum.DBT,
+                operator_type=shared.OperatorType.DBT,
                 webhook=shared.OperatorWebhook(
                     dbt_cloud=shared.OperatorWebhookDbtCloud(
                         account_id=693988,
@@ -491,7 +491,7 @@ req = shared.WebBackendConnectionUpdate(
                     execution_body='molestiae',
                     execution_url='vitae',
                     webhook_config_id='9890f42a-4bb4-438d-85b2-60591d745e3c',
-                    webhook_type=shared.OperatorWebhookWebhookTypeEnum.DBT_CLOUD,
+                    webhook_type=shared.OperatorWebhookWebhookType.DBT_CLOUD,
                 ),
             ),
             workspace_id='2059c9c3-f567-4e0e-a527-65b1d62fcdac',
@@ -505,12 +505,12 @@ req = shared.WebBackendConnectionUpdate(
         memory_request='sunt',
     ),
     schedule=shared.ConnectionSchedule(
-        time_unit=shared.ConnectionScheduleTimeUnitEnum.MINUTES,
+        time_unit=shared.ConnectionScheduleTimeUnit.MINUTES,
         units=80673,
     ),
     schedule_data=shared.ConnectionScheduleData(
         basic_schedule=shared.ConnectionScheduleDataBasicSchedule(
-            time_unit=shared.ConnectionScheduleDataBasicScheduleTimeUnitEnum.HOURS,
+            time_unit=shared.ConnectionScheduleDataBasicScheduleTimeUnit.HOURS,
             units=799730,
         ),
         cron=shared.ConnectionScheduleDataCron(
@@ -518,10 +518,10 @@ req = shared.WebBackendConnectionUpdate(
             cron_time_zone='consequuntur',
         ),
     ),
-    schedule_type=shared.ConnectionScheduleTypeEnum.MANUAL,
+    schedule_type=shared.ConnectionScheduleType.MANUAL,
     skip_reset=False,
     source_catalog_id='39e8f25c-d0d1-49d9-99f4-39e39266cbd9',
-    status=shared.ConnectionStatusEnum.ACTIVE,
+    status=shared.ConnectionStatus.ACTIVE,
     sync_catalog=shared.AirbyteCatalog(
         streams=[
             shared.AirbyteStreamAndConfiguration(
@@ -532,7 +532,7 @@ req = shared.WebBackendConnectionUpdate(
                         'odit',
                         'rerum',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.APPEND,
+                    destination_sync_mode=shared.DestinationSyncMode.APPEND,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -568,7 +568,7 @@ req = shared.WebBackendConnectionUpdate(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.INCREMENTAL,
+                    sync_mode=shared.SyncMode.INCREMENTAL,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -592,9 +592,9 @@ req = shared.WebBackendConnectionUpdate(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
                     ],
                 ),
             ),
@@ -606,7 +606,7 @@ req = shared.WebBackendConnectionUpdate(
                         'et',
                         'accusamus',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.OVERWRITE,
+                    destination_sync_mode=shared.DestinationSyncMode.OVERWRITE,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -646,7 +646,7 @@ req = shared.WebBackendConnectionUpdate(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.FULL_REFRESH,
+                    sync_mode=shared.SyncMode.FULL_REFRESH,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -677,7 +677,7 @@ req = shared.WebBackendConnectionUpdate(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.FULL_REFRESH,
+                        shared.SyncMode.FULL_REFRESH,
                     ],
                 ),
             ),
@@ -688,7 +688,7 @@ req = shared.WebBackendConnectionUpdate(
                         'molestias',
                         'atque',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.APPEND,
+                    destination_sync_mode=shared.DestinationSyncMode.APPEND,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -730,7 +730,7 @@ req = shared.WebBackendConnectionUpdate(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.INCREMENTAL,
+                    sync_mode=shared.SyncMode.INCREMENTAL,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -766,10 +766,10 @@ req = shared.WebBackendConnectionUpdate(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.INCREMENTAL,
-                        shared.SyncModeEnum.FULL_REFRESH,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.INCREMENTAL,
+                        shared.SyncMode.FULL_REFRESH,
                     ],
                 ),
             ),
@@ -780,7 +780,7 @@ req = shared.WebBackendConnectionUpdate(
                         'facilis',
                         'earum',
                     ],
-                    destination_sync_mode=shared.DestinationSyncModeEnum.APPEND,
+                    destination_sync_mode=shared.DestinationSyncMode.APPEND,
                     field_selection_enabled=False,
                     primary_key=[
                         [
@@ -825,7 +825,7 @@ req = shared.WebBackendConnectionUpdate(
                         ),
                     ],
                     suggested=False,
-                    sync_mode=shared.SyncModeEnum.FULL_REFRESH,
+                    sync_mode=shared.SyncMode.FULL_REFRESH,
                 ),
                 stream=shared.AirbyteStream(
                     default_cursor_field=[
@@ -862,7 +862,7 @@ req = shared.WebBackendConnectionUpdate(
                         ],
                     ],
                     supported_sync_modes=[
-                        shared.SyncModeEnum.FULL_REFRESH,
+                        shared.SyncMode.FULL_REFRESH,
                     ],
                 ),
             ),

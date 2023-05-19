@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class JobStatusEnum(str, Enum):
+class JobStatus(str, Enum):
     PENDING = 'pending'
     RUNNING = 'running'
     INCOMPLETE = 'incomplete'

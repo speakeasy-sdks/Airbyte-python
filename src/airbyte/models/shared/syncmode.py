@@ -3,7 +3,6 @@
 from __future__ import annotations
 from enum import Enum
 
-class GeographyEnum(str, Enum):
-    AUTO = 'auto'
-    US = 'us'
-    EU = 'eu'
+class SyncMode(str, Enum):
+    FULL_REFRESH = 'full_refresh'
+    INCREMENTAL = 'incremental'

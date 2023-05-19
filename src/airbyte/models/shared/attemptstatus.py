@@ -3,6 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class NonBreakingChangesPreferenceEnum(str, Enum):
-    IGNORE = 'ignore'
-    DISABLE = 'disable'
+class AttemptStatus(str, Enum):
+    RUNNING = 'running'
+    FAILED = 'failed'
+    SUCCEEDED = 'succeeded'
