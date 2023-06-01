@@ -20,6 +20,7 @@ src/airbyte/state.py
 src/airbyte/web_backend.py
 src/airbyte/workspace.py
 src/airbyte/sdk.py
+.gitignore
 pylintrc
 setup.py
 src/airbyte/__init__.py
