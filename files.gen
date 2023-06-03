@@ -1,3 +1,4 @@
+src/airbyte/sdkconfiguration.py
 src/airbyte/attempt.py
 src/airbyte/connection.py
 src/airbyte/destination.py
