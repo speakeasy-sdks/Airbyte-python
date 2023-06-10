@@ -7,10 +7,11 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WebBackendCheckUpdatesRead:
     r"""Summary of source and destination definitions that could be updated"""
-    
     destination_definitions: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationDefinitions') }})
     source_definitions: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceDefinitions') }})
     
+

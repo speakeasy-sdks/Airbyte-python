@@ -8,9 +8,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AttemptStats:
-    
     bytes_emitted: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bytesEmitted'), 'exclude': lambda f: f is None }})
     estimated_bytes: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('estimatedBytes'), 'exclude': lambda f: f is None }})
     estimated_records: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('estimatedRecords'), 'exclude': lambda f: f is None }})
@@ -18,3 +18,4 @@ class AttemptStats:
     records_emitted: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('recordsEmitted'), 'exclude': lambda f: f is None }})
     state_messages_emitted: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stateMessagesEmitted'), 'exclude': lambda f: f is None }})
     
+

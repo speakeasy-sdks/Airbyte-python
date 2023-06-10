@@ -9,9 +9,9 @@ from ..shared import oauthconsentread as shared_oauthconsentread
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetSourceOAuthConsentResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
@@ -22,3 +22,4 @@ class GetSourceOAuthConsentResponse:
     r"""Successful operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

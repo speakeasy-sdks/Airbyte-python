@@ -10,11 +10,12 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SaveStatsRequestBody:
-    
     attempt_number: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attemptNumber') }})
     job_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('jobId') }})
     stats: shared_attemptstats.AttemptStats = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stats') }})
     stream_stats: Optional[list[shared_attemptstreamstats.AttemptStreamStats]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('streamStats'), 'exclude': lambda f: f is None }})
     
+

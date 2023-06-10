@@ -9,9 +9,9 @@ from ..shared import sourceread as shared_sourceread
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class CloneSourceResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
@@ -22,3 +22,4 @@ class CloneSourceResponse:
     source_read: Optional[shared_sourceread.SourceRead] = dataclasses.field(default=None)
     r"""Successful operation"""
     
+

@@ -8,12 +8,13 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ResourceRequirements:
     r"""optional resource requirements to run workers (blank for unbounded allocations)"""
-    
     cpu_limit: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cpu_limit'), 'exclude': lambda f: f is None }})
     cpu_request: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cpu_request'), 'exclude': lambda f: f is None }})
     memory_limit: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memory_limit'), 'exclude': lambda f: f is None }})
     memory_request: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('memory_request'), 'exclude': lambda f: f is None }})
     
+

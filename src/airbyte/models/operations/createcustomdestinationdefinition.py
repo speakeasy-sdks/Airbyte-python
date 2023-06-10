@@ -8,9 +8,9 @@ from ..shared import invalidinputexceptioninfo as shared_invalidinputexceptionin
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class CreateCustomDestinationDefinitionResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     destination_definition_read: Optional[shared_destinationdefinitionread.DestinationDefinitionRead] = dataclasses.field(default=None)
@@ -19,3 +19,4 @@ class CreateCustomDestinationDefinitionResponse:
     r"""Input failed validation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

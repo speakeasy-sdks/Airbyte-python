@@ -9,9 +9,9 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AttemptSyncConfig:
-    
     destination_configuration: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationConfiguration') }})
     r"""The values required to configure the destination. The schema for this must match the schema return by destination_definition_specifications/get for the destinationDefinition."""
     source_configuration: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceConfiguration') }})
@@ -19,3 +19,4 @@ class AttemptSyncConfig:
     state: Optional[shared_connectionstate.ConnectionState] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state'), 'exclude': lambda f: f is None }})
     r"""Contains the state for a connection. The stateType field identifies what type of state it is. Only the field corresponding to that type will be set, the rest will be null. If stateType=not_set, then none of the fields will be set."""
     
+

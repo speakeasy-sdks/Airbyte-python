@@ -10,9 +10,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class JobWithAttemptsRead:
-    
     attempts: Optional[list[shared_attemptread.AttemptRead]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attempts'), 'exclude': lambda f: f is None }})
     job: Optional[shared_jobread.JobRead] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('job'), 'exclude': lambda f: f is None }})
     
+

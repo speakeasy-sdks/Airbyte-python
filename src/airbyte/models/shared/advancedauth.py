@@ -14,9 +14,9 @@ class AdvancedAuthAuthFlowType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AdvancedAuth:
-    
     auth_flow_type: Optional[AdvancedAuthAuthFlowType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('authFlowType'), 'exclude': lambda f: f is None }})
     oauth_config_specification: Optional[shared_oauthconfigspecification.OAuthConfigSpecification] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('oauthConfigSpecification'), 'exclude': lambda f: f is None }})
     predicate_key: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('predicateKey'), 'exclude': lambda f: f is None }})
@@ -24,3 +24,4 @@ class AdvancedAuth:
     predicate_value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('predicateValue'), 'exclude': lambda f: f is None }})
     r"""Value of the predicate_key fields for the advanced auth to be applicable."""
     
+

@@ -17,10 +17,10 @@ class FieldTransformTransformType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class FieldTransform:
     r"""Describes the difference between two Streams."""
-    
     breaking: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('breaking') }})
     field_name: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fieldName') }})
     r"""A field name is a list of strings that form the path to the field."""
@@ -29,3 +29,4 @@ class FieldTransform:
     remove_field: Optional[shared_fieldremove.FieldRemove] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('removeField'), 'exclude': lambda f: f is None }})
     update_field_schema: Optional[shared_fieldschemaupdate.FieldSchemaUpdate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updateFieldSchema'), 'exclude': lambda f: f is None }})
     
+

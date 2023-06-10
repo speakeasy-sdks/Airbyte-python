@@ -8,9 +8,9 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class OAuthConfigSpecification:
-    
     complete_o_auth_output_specification: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('completeOAuthOutputSpecification'), 'exclude': lambda f: f is None }})
     r"""The values required to configure OAuth flows. The schema for this must match the `OAuthConfigSpecification.oauthUserInputFromConnectorConfigSpecification` schema."""
     complete_o_auth_server_input_specification: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('completeOAuthServerInputSpecification'), 'exclude': lambda f: f is None }})
@@ -20,3 +20,4 @@ class OAuthConfigSpecification:
     oauth_user_input_from_connector_config_specification: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('oauthUserInputFromConnectorConfigSpecification'), 'exclude': lambda f: f is None }})
     r"""The values required to configure OAuth flows. The schema for this must match the `OAuthConfigSpecification.oauthUserInputFromConnectorConfigSpecification` schema."""
     
+

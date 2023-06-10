@@ -16,11 +16,12 @@ class StreamTransformTransformType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class StreamTransform:
-    
     stream_descriptor: shared_streamdescriptor.StreamDescriptor = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('streamDescriptor') }})
     transform_type: StreamTransformTransformType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('transformType') }})
     update_stream: Optional[list[shared_fieldtransform.FieldTransform]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updateStream'), 'exclude': lambda f: f is None }})
     r"""list of field transformations. order does not matter."""
     
+

@@ -17,10 +17,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ConnectionUpdate:
     r"""Used to apply a patch-style update to a connection, which means that null properties remain unchanged"""
-    
     connection_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionId') }})
     breaking_change: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('breakingChange'), 'exclude': lambda f: f is None }})
     geography: Optional[shared_geography.Geography] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('geography'), 'exclude': lambda f: f is None }})
@@ -49,3 +49,4 @@ class ConnectionUpdate:
     sync_catalog: Optional[shared_airbytecatalog.AirbyteCatalog] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('syncCatalog'), 'exclude': lambda f: f is None }})
     r"""describes the available schema (catalog)."""
     
+

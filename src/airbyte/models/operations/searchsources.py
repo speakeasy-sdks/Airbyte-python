@@ -8,9 +8,9 @@ from ..shared import sourcereadlist as shared_sourcereadlist
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class SearchSourcesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
@@ -19,3 +19,4 @@ class SearchSourcesResponse:
     source_read_list: Optional[shared_sourcereadlist.SourceReadList] = dataclasses.field(default=None)
     r"""Successful operation"""
     
+

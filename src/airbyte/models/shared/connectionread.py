@@ -17,10 +17,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ConnectionRead:
     r"""Successful operation"""
-    
     breaking_change: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('breakingChange') }})
     connection_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionId') }})
     destination_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationId') }})
@@ -50,3 +50,4 @@ class ConnectionRead:
     r"""determine how the schedule data should be interpreted"""
     source_catalog_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceCatalogId'), 'exclude': lambda f: f is None }})
     
+

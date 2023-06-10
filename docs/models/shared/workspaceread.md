@@ -1,0 +1,24 @@
+# WorkspaceRead
+
+Successful operation
+
+
+## Fields
+
+| Field                                                               | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `anonymous_data_collection`                                         | *Optional[bool]*                                                    | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `customer_id`                                                       | *str*                                                               | :heavy_check_mark:                                                  | N/A                                                                 |
+| `default_geography`                                                 | [Optional[Geography]](../../models/shared/geography.md)             | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `display_setup_wizard`                                              | *Optional[bool]*                                                    | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `email`                                                             | *Optional[str]*                                                     | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `feedback_done`                                                     | *Optional[bool]*                                                    | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `first_completed_sync`                                              | *Optional[bool]*                                                    | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `initial_setup_complete`                                            | *bool*                                                              | :heavy_check_mark:                                                  | N/A                                                                 |
+| `name`                                                              | *str*                                                               | :heavy_check_mark:                                                  | N/A                                                                 |
+| `news`                                                              | *Optional[bool]*                                                    | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `notifications`                                                     | list[[Notification](../../models/shared/notification.md)]           | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `security_updates`                                                  | *Optional[bool]*                                                    | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `slug`                                                              | *str*                                                               | :heavy_check_mark:                                                  | N/A                                                                 |
+| `webhook_configs`                                                   | list[[WebhookConfigRead](../../models/shared/webhookconfigread.md)] | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `workspace_id`                                                      | *str*                                                               | :heavy_check_mark:                                                  | N/A                                                                 |

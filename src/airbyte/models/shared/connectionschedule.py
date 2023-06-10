@@ -15,10 +15,11 @@ class ConnectionScheduleTimeUnit(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ConnectionSchedule:
     r"""if null, then no schedule is set."""
-    
     time_unit: ConnectionScheduleTimeUnit = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timeUnit') }})
     units: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('units') }})
     
+

@@ -8,10 +8,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class NormalizationDestinationDefinitionConfig:
     r"""describes a normalization config for destination definition"""
-    
     supported: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('supported') }})
     r"""whether the destination definition supports normalization."""
     normalization_integration_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('normalizationIntegrationType'), 'exclude': lambda f: f is None }})
@@ -21,3 +21,4 @@ class NormalizationDestinationDefinitionConfig:
     normalization_tag: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('normalizationTag'), 'exclude': lambda f: f is None }})
     r"""a field indicating the tag of the docker repository to be used for normalization."""
     
+

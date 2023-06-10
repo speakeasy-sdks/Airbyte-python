@@ -8,10 +8,11 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CatalogDiff:
     r"""Describes the difference between two Airbyte catalogs."""
-    
     transforms: list[shared_streamtransform.StreamTransform] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('transforms') }})
     r"""list of stream transformations. order does not matter."""
     
+

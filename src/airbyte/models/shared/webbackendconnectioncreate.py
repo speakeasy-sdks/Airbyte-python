@@ -18,9 +18,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WebBackendConnectionCreate:
-    
     destination_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationId') }})
     source_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceId') }})
     status: shared_connectionstatus.ConnectionStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
@@ -49,3 +49,4 @@ class WebBackendConnectionCreate:
     sync_catalog: Optional[shared_airbytecatalog.AirbyteCatalog] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('syncCatalog'), 'exclude': lambda f: f is None }})
     r"""describes the available schema (catalog)."""
     
+

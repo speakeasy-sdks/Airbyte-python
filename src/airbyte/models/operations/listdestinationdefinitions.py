@@ -7,12 +7,13 @@ from ..shared import destinationdefinitionreadlist as shared_destinationdefiniti
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ListDestinationDefinitionsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     destination_definition_read_list: Optional[shared_destinationdefinitionreadlist.DestinationDefinitionReadList] = dataclasses.field(default=None)
     r"""Successful operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

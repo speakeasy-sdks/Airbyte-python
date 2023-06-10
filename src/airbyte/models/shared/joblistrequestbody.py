@@ -10,11 +10,12 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class JobListRequestBody:
-    
     config_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configId') }})
     config_types: list[shared_jobconfigtype.JobConfigType] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configTypes') }})
     including_job_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('includingJobId'), 'exclude': lambda f: f is None }})
     pagination: Optional[shared_pagination.Pagination] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pagination'), 'exclude': lambda f: f is None }})
     
+

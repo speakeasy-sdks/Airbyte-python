@@ -9,9 +9,9 @@ from ..shared import workspaceread as shared_workspaceread
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetWorkspaceResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
@@ -22,3 +22,4 @@ class GetWorkspaceResponse:
     workspace_read: Optional[shared_workspaceread.WorkspaceRead] = dataclasses.field(default=None)
     r"""Successful operation"""
     
+

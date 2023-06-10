@@ -9,13 +9,14 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SourceDiscoverSchemaWriteRequestBody:
     r"""to write this requested object to database."""
-    
     catalog: shared_airbytecatalog.AirbyteCatalog = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('catalog') }})
     r"""describes the available schema (catalog)."""
     configuration_hash: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configurationHash'), 'exclude': lambda f: f is None }})
     connector_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectorVersion'), 'exclude': lambda f: f is None }})
     source_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceId'), 'exclude': lambda f: f is None }})
     
+

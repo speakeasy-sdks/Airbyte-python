@@ -8,9 +8,10 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WorkspaceReadList:
     r"""Successful operation"""
-    
     workspaces: list[shared_workspaceread.WorkspaceRead] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workspaces') }})
     
+

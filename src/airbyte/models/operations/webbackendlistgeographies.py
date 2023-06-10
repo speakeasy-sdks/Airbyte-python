@@ -7,12 +7,13 @@ from ..shared import webbackendgeographieslistresult as shared_webbackendgeograp
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class WebBackendListGeographiesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     web_backend_geographies_list_result: Optional[shared_webbackendgeographieslistresult.WebBackendGeographiesListResult] = dataclasses.field(default=None)
     r"""Successful operation"""
     
+

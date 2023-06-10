@@ -9,10 +9,11 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SourceCloneRequestBody:
     r"""The values required to configure the source. The schema for this should have an id of the existing source along with the configuration you want to change in case."""
-    
     source_clone_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceCloneId') }})
     source_configuration: Optional[shared_sourcecloneconfiguration.SourceCloneConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceConfiguration'), 'exclude': lambda f: f is None }})
     
+

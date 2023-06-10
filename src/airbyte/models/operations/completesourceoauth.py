@@ -8,9 +8,9 @@ from ..shared import notfoundknownexceptioninfo as shared_notfoundknownexception
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class CompleteSourceOAuthResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     complete_o_auth_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
@@ -21,3 +21,4 @@ class CompleteSourceOAuthResponse:
     r"""Object with given id was not found."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

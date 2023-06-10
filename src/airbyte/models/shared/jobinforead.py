@@ -9,10 +9,11 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class JobInfoRead:
     r"""Successful operation"""
-    
     attempts: list[shared_attemptinforead.AttemptInfoRead] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attempts') }})
     job: shared_jobread.JobRead = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('job') }})
     
+

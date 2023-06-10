@@ -12,10 +12,10 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DestinationDefinitionSpecificationRead:
     r"""Successful operation"""
-    
     destination_definition_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationDefinitionId') }})
     job_info: shared_synchronousjobread.SynchronousJobRead = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('jobInfo') }})
     advanced_auth: Optional[shared_advancedauth.AdvancedAuth] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('advancedAuth'), 'exclude': lambda f: f is None }})
@@ -25,3 +25,4 @@ class DestinationDefinitionSpecificationRead:
     documentation_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documentationUrl'), 'exclude': lambda f: f is None }})
     supported_destination_sync_modes: Optional[list[shared_destinationsyncmode.DestinationSyncMode]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('supportedDestinationSyncModes'), 'exclude': lambda f: f is None }})
     
+

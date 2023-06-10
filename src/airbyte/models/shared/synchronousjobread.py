@@ -10,9 +10,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SynchronousJobRead:
-    
     config_type: shared_jobconfigtype.JobConfigType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configType') }})
     created_at: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     ended_at: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endedAt') }})
@@ -23,3 +23,4 @@ class SynchronousJobRead:
     connector_configuration_updated: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectorConfigurationUpdated'), 'exclude': lambda f: f is None }})
     logs: Optional[shared_logread.LogRead] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logs'), 'exclude': lambda f: f is None }})
     
+

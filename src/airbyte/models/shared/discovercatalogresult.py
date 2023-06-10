@@ -7,9 +7,10 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DiscoverCatalogResult:
     r"""Successful Operation"""
-    
     catalog_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('catalogId') }})
     
+

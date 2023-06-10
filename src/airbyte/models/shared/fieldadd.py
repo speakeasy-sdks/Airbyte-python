@@ -2,15 +2,17 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import fieldschema as shared_fieldschema
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any, Optional
+from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class FieldAdd:
-    
-    schema: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schema'), 'exclude': lambda f: f is None }})
+    schema: Optional[shared_fieldschema.FieldSchema] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schema'), 'exclude': lambda f: f is None }})
     r"""JSONSchema representation of the field"""
     
+

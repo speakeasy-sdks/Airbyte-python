@@ -9,12 +9,13 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class JobTypeResourceLimit:
     r"""sets resource requirements for a specific job type for an actor definition. these values override the default, if both are set."""
-    
     job_type: shared_jobtype.JobType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('jobType') }})
     r"""enum that describes the different types of jobs that the platform runs."""
     resource_requirements: shared_resourcerequirements.ResourceRequirements = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resourceRequirements') }})
     r"""optional resource requirements to run workers (blank for unbounded allocations)"""
     
+

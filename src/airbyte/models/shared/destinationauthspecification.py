@@ -13,10 +13,11 @@ class DestinationAuthSpecificationAuthType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DestinationAuthSpecification:
-    
     auth_type: Optional[DestinationAuthSpecificationAuthType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth_type'), 'exclude': lambda f: f is None }})
     oauth2_specification: Optional[shared_oauth2specification.OAuth2Specification] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('oauth2Specification'), 'exclude': lambda f: f is None }})
     r"""An object containing any metadata needed to describe this connector's Oauth flow"""
     
+

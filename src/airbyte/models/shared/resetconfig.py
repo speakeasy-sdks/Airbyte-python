@@ -9,9 +9,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ResetConfig:
     r"""contains information about how a reset was configured. only populated if the job was a reset."""
-    
     streams_to_reset: Optional[list[shared_streamdescriptor.StreamDescriptor]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('streamsToReset'), 'exclude': lambda f: f is None }})
     
+

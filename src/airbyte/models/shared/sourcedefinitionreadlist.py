@@ -8,9 +8,10 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SourceDefinitionReadList:
     r"""Successful operation"""
-    
     source_definitions: list[shared_sourcedefinitionread.SourceDefinitionRead] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceDefinitions') }})
     
+

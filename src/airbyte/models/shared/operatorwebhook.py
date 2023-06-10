@@ -9,22 +9,24 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class OperatorWebhookDbtCloud:
-    
     account_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountId') }})
     r"""The account id associated with the job"""
     job_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('jobId') }})
     r"""The job id associated with the job"""
     
+
+
 class OperatorWebhookWebhookType(str, Enum):
     DBT_CLOUD = 'dbtCloud'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class OperatorWebhook:
-    
     dbt_cloud: Optional[OperatorWebhookDbtCloud] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dbtCloud'), 'exclude': lambda f: f is None }})
     execution_body: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('executionBody'), 'exclude': lambda f: f is None }})
     r"""DEPRECATED. Populate dbtCloud instead."""
@@ -34,3 +36,4 @@ class OperatorWebhook:
     r"""The id of the webhook configs to use from the workspace."""
     webhook_type: Optional[OperatorWebhookWebhookType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhookType'), 'exclude': lambda f: f is None }})
     
+

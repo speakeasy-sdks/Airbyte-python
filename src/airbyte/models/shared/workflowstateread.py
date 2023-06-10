@@ -7,8 +7,9 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WorkflowStateRead:
-    
     running: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('running') }})
     
+

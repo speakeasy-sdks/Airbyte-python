@@ -8,9 +8,10 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class OperationReadList:
     r"""Successful operation"""
-    
     operations: list[shared_operationread.OperationRead] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('operations') }})
     
+

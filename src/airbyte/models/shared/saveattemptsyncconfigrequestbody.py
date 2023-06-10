@@ -8,10 +8,11 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SaveAttemptSyncConfigRequestBody:
-    
     attempt_number: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attemptNumber') }})
     job_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('jobId') }})
     sync_config: shared_attemptsyncconfig.AttemptSyncConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('syncConfig') }})
     
+

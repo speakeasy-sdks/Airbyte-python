@@ -7,12 +7,13 @@ from ..shared import workspacereadlist as shared_workspacereadlist
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ListWorkspacesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     workspace_read_list: Optional[shared_workspacereadlist.WorkspaceReadList] = dataclasses.field(default=None)
     r"""Successful operation"""
     
+

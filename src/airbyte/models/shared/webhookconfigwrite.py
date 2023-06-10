@@ -8,9 +8,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WebhookConfigWrite:
-    
     auth_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('authToken'), 'exclude': lambda f: f is None }})
     r"""an auth token, to be passed as the value for an HTTP Authorization header."""
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
@@ -18,3 +18,4 @@ class WebhookConfigWrite:
     validation_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('validationUrl'), 'exclude': lambda f: f is None }})
     r"""if supplied, the webhook config will be validated by checking that this URL returns a 2xx response."""
     
+

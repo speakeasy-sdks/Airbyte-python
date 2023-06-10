@@ -7,12 +7,13 @@ from ..shared import privatesourcedefinitionreadlist as shared_privatesourcedefi
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ListPrivateSourceDefinitionsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     private_source_definition_read_list: Optional[shared_privatesourcedefinitionreadlist.PrivateSourceDefinitionReadList] = dataclasses.field(default=None)
     r"""Successful operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

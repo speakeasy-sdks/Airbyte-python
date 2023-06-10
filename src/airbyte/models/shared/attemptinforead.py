@@ -9,9 +9,10 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AttemptInfoRead:
-    
     attempt: shared_attemptread.AttemptRead = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attempt') }})
     logs: shared_logread.LogRead = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logs') }})
     
+

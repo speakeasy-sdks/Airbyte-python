@@ -9,9 +9,9 @@ from ..shared import notfoundknownexceptioninfo as shared_notfoundknownexception
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetConnectionResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     connection_read: Optional[shared_connectionread.ConnectionRead] = dataclasses.field(default=None)
@@ -22,3 +22,4 @@ class GetConnectionResponse:
     r"""Object with given id was not found."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

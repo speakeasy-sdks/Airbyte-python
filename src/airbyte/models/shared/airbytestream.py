@@ -2,22 +2,23 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import streamjsonschema as shared_streamjsonschema
 from ..shared import syncmode as shared_syncmode
 from airbyte import utils
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any, Optional
+from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AirbyteStream:
     r"""the immutable schema defined by the source"""
-    
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""Stream's name."""
     default_cursor_field: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultCursorField'), 'exclude': lambda f: f is None }})
     r"""Path to the field that will be used to determine if a record is new or modified since the last sync. If not provided by the source, the end user will have to specify the comparable themselves."""
-    json_schema: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('jsonSchema'), 'exclude': lambda f: f is None }})
+    json_schema: Optional[shared_streamjsonschema.StreamJSONSchema] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('jsonSchema'), 'exclude': lambda f: f is None }})
     r"""Stream schema using Json Schema specs."""
     namespace: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespace'), 'exclude': lambda f: f is None }})
     r"""Optional Source-defined namespace. Airbyte streams from the same sources should have the same namespace. Currently only used by JDBC destinations to determine what schema to write to."""
@@ -27,3 +28,4 @@ class AirbyteStream:
     r"""If the source defines the primary key, paths to the fields that will be used as a primary key. If not provided by the source, the end user will have to specify the primary key themselves."""
     supported_sync_modes: Optional[list[shared_syncmode.SyncMode]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('supportedSyncModes'), 'exclude': lambda f: f is None }})
     
+

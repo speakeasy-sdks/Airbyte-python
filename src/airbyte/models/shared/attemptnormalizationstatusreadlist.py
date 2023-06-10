@@ -9,9 +9,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AttemptNormalizationStatusReadList:
     r"""Successful operation"""
-    
     attempt_normalization_statuses: Optional[list[shared_attemptnormalizationstatusread.AttemptNormalizationStatusRead]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attemptNormalizationStatuses'), 'exclude': lambda f: f is None }})
     
+

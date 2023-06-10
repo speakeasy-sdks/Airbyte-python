@@ -9,9 +9,9 @@ from ..shared import notfoundknownexceptioninfo as shared_notfoundknownexception
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetMostRecentSourceActorCatalogResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     actor_catalog_with_updated_at: Optional[shared_actorcatalogwithupdatedat.ActorCatalogWithUpdatedAt] = dataclasses.field(default=None)
@@ -22,3 +22,4 @@ class GetMostRecentSourceActorCatalogResponse:
     r"""Object with given id was not found."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

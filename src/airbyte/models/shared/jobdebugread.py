@@ -11,9 +11,9 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class JobDebugRead:
-    
     airbyte_version: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('airbyteVersion') }})
     config_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configId') }})
     config_type: shared_jobconfigtype.JobConfigType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configType') }})
@@ -22,3 +22,4 @@ class JobDebugRead:
     source_definition: shared_sourcedefinitionread.SourceDefinitionRead = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceDefinition') }})
     status: shared_jobstatus.JobStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
+

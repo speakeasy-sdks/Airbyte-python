@@ -8,9 +8,9 @@ from ..shared import notfoundknownexceptioninfo as shared_notfoundknownexception
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class SetInstancewideSourceOauthParamsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     known_exception_info: Optional[shared_knownexceptioninfo.KnownExceptionInfo] = dataclasses.field(default=None)
@@ -19,3 +19,4 @@ class SetInstancewideSourceOauthParamsResponse:
     r"""Object with given id was not found."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

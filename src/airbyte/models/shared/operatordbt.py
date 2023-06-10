@@ -8,11 +8,12 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class OperatorDbt:
-    
     git_repo_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gitRepoUrl') }})
     dbt_arguments: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dbtArguments'), 'exclude': lambda f: f is None }})
     docker_image: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dockerImage'), 'exclude': lambda f: f is None }})
     git_repo_branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gitRepoBranch'), 'exclude': lambda f: f is None }})
     
+

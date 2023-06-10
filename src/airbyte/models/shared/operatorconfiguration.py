@@ -12,11 +12,12 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class OperatorConfiguration:
-    
     operator_type: shared_operatortype.OperatorType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('operatorType') }})
     dbt: Optional[shared_operatordbt.OperatorDbt] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dbt'), 'exclude': lambda f: f is None }})
     normalization: Optional[shared_operatornormalization.OperatorNormalization] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('normalization'), 'exclude': lambda f: f is None }})
     webhook: Optional[shared_operatorwebhook.OperatorWebhook] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook'), 'exclude': lambda f: f is None }})
     
+

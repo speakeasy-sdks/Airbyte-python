@@ -9,9 +9,9 @@ from ..shared import privatedestinationdefinitionread as shared_privatedestinati
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GrantDestinationDefinitionToWorkspaceResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
@@ -22,3 +22,4 @@ class GrantDestinationDefinitionToWorkspaceResponse:
     r"""Successful operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

@@ -12,9 +12,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AttemptRead:
-    
     created_at: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     status: shared_attemptstatus.AttemptStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
@@ -26,3 +26,4 @@ class AttemptRead:
     stream_stats: Optional[list[shared_attemptstreamstats.AttemptStreamStats]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('streamStats'), 'exclude': lambda f: f is None }})
     total_stats: Optional[shared_attemptstats.AttemptStats] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('totalStats'), 'exclude': lambda f: f is None }})
     
+

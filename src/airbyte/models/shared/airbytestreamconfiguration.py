@@ -11,10 +11,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AirbyteStreamConfiguration:
     r"""the mutable part of the stream to configure the destination"""
-    
     destination_sync_mode: shared_destinationsyncmode.DestinationSyncMode = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationSyncMode') }})
     sync_mode: shared_syncmode.SyncMode = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('syncMode') }})
     alias_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('aliasName'), 'exclude': lambda f: f is None }})
@@ -32,3 +32,4 @@ class AirbyteStreamConfiguration:
     suggested: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('suggested'), 'exclude': lambda f: f is None }})
     r"""Does the connector suggest that this stream be enabled by default?"""
     
+

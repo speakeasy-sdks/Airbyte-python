@@ -6,12 +6,13 @@ import requests as requests_http
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOpenAPISpecResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     get_open_api_spec_200_text_plain_binary_string: Optional[bytes] = dataclasses.field(default=None)
     r"""Returns the openapi specification file"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

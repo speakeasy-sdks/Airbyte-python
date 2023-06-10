@@ -11,10 +11,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WorkspaceRead:
     r"""Successful operation"""
-    
     customer_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customerId') }})
     initial_setup_complete: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('initialSetupComplete') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
@@ -31,3 +31,4 @@ class WorkspaceRead:
     security_updates: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('securityUpdates'), 'exclude': lambda f: f is None }})
     webhook_configs: Optional[list[shared_webhookconfigread.WebhookConfigRead]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhookConfigs'), 'exclude': lambda f: f is None }})
     
+

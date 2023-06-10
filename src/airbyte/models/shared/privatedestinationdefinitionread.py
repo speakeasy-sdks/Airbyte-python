@@ -8,10 +8,11 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PrivateDestinationDefinitionRead:
     r"""Successful operation"""
-    
     destination_definition: shared_destinationdefinitionread.DestinationDefinitionRead = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationDefinition') }})
     granted: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('granted') }})
     
+

@@ -11,9 +11,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class JobRead:
-    
     config_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configId') }})
     config_type: shared_jobconfigtype.JobConfigType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configType') }})
     created_at: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt') }})
@@ -24,3 +24,4 @@ class JobRead:
     r"""contains information about how a reset was configured. only populated if the job was a reset."""
     started_at: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('startedAt'), 'exclude': lambda f: f is None }})
     
+

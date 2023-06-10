@@ -8,9 +8,9 @@ from ..shared import notfoundknownexceptioninfo as shared_notfoundknownexception
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetLogsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     get_logs_200_text_plain_binary_string: Optional[bytes] = dataclasses.field(default=None)
@@ -21,3 +21,4 @@ class GetLogsResponse:
     r"""Object with given id was not found."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

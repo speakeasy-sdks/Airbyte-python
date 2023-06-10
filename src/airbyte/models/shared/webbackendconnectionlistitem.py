@@ -15,10 +15,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WebBackendConnectionListItem:
     r"""Information about a connection that shows up in the connection list view."""
-    
     connection_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionId') }})
     destination: shared_destinationsnippetread.DestinationSnippetRead = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destination') }})
     is_syncing: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isSyncing') }})
@@ -35,3 +35,4 @@ class WebBackendConnectionListItem:
     schedule_type: Optional[shared_connectionscheduletype.ConnectionScheduleType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleType'), 'exclude': lambda f: f is None }})
     r"""determine how the schedule data should be interpreted"""
     
+

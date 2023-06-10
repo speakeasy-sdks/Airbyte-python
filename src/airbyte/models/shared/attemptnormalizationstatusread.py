@@ -8,11 +8,12 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AttemptNormalizationStatusRead:
-    
     attempt_number: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attemptNumber'), 'exclude': lambda f: f is None }})
     has_normalization_failed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hasNormalizationFailed'), 'exclude': lambda f: f is None }})
     has_records_committed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hasRecordsCommitted'), 'exclude': lambda f: f is None }})
     records_committed: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('recordsCommitted'), 'exclude': lambda f: f is None }})
     
+

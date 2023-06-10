@@ -11,9 +11,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WorkspaceCreate:
-    
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     anonymous_data_collection: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('anonymousDataCollection'), 'exclude': lambda f: f is None }})
     default_geography: Optional[shared_geography.Geography] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultGeography'), 'exclude': lambda f: f is None }})
@@ -24,3 +24,4 @@ class WorkspaceCreate:
     security_updates: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('securityUpdates'), 'exclude': lambda f: f is None }})
     webhook_configs: Optional[list[shared_webhookconfigwrite.WebhookConfigWrite]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhookConfigs'), 'exclude': lambda f: f is None }})
     
+

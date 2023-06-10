@@ -1,0 +1,11 @@
+# OperatorConfiguration
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `dbt`                                                                           | [Optional[OperatorDbt]](../../models/shared/operatordbt.md)                     | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `normalization`                                                                 | [Optional[OperatorNormalization]](../../models/shared/operatornormalization.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `operator_type`                                                                 | [OperatorType](../../models/shared/operatortype.md)                             | :heavy_check_mark:                                                              | N/A                                                                             |
+| `webhook`                                                                       | [Optional[OperatorWebhook]](../../models/shared/operatorwebhook.md)             | :heavy_minus_sign:                                                              | N/A                                                                             |

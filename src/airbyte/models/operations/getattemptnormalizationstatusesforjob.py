@@ -7,12 +7,13 @@ from ..shared import attemptnormalizationstatusreadlist as shared_attemptnormali
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetAttemptNormalizationStatusesForJobResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     attempt_normalization_status_read_list: Optional[shared_attemptnormalizationstatusreadlist.AttemptNormalizationStatusReadList] = dataclasses.field(default=None)
     r"""Successful operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

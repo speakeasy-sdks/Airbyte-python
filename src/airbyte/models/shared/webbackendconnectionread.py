@@ -23,10 +23,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WebBackendConnectionRead:
     r"""Successful operation"""
-    
     connection_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionId') }})
     destination: shared_destinationread.DestinationRead = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destination') }})
     destination_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationId') }})
@@ -65,3 +65,4 @@ class WebBackendConnectionRead:
     schedule_type: Optional[shared_connectionscheduletype.ConnectionScheduleType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduleType'), 'exclude': lambda f: f is None }})
     r"""determine how the schedule data should be interpreted"""
     
+

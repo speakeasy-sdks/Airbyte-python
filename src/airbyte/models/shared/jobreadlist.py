@@ -8,11 +8,12 @@ from dataclasses_json import Undefined, dataclass_json
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class JobReadList:
     r"""Successful operation"""
-    
     jobs: list[shared_jobwithattemptsread.JobWithAttemptsRead] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('jobs') }})
     total_job_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('totalJobCount') }})
     r"""the total count of jobs for the specified connection"""
     
+

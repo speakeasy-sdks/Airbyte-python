@@ -9,10 +9,11 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DestinationCloneRequestBody:
     r"""The values required to configure the destination. The schema for this should have an id of the existing destination along with the configuration you want to change in case."""
-    
     destination_clone_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationCloneId') }})
     destination_configuration: Optional[shared_destinationcloneconfiguration.DestinationCloneConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationConfiguration'), 'exclude': lambda f: f is None }})
     
+

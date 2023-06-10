@@ -10,9 +10,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AttemptFailureReason:
-    
     timestamp: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timestamp') }})
     external_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalMessage'), 'exclude': lambda f: f is None }})
     failure_origin: Optional[shared_attemptfailureorigin.AttemptFailureOrigin] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('failureOrigin'), 'exclude': lambda f: f is None }})
@@ -24,3 +24,4 @@ class AttemptFailureReason:
     r"""True if it is known that retrying may succeed, e.g. for a transient failure. False if it is known that a retry will not succeed, e.g. for a configuration issue. If not set, retryable status is not well known."""
     stacktrace: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stacktrace'), 'exclude': lambda f: f is None }})
     
+

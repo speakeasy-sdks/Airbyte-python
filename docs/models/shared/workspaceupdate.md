@@ -1,0 +1,19 @@
+# WorkspaceUpdate
+
+Used to apply a patch-style update to a workspace, which means that null properties remain unchanged
+
+
+## Fields
+
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `anonymous_data_collection`                                           | *Optional[bool]*                                                      | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `default_geography`                                                   | [Optional[Geography]](../../models/shared/geography.md)               | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `display_setup_wizard`                                                | *Optional[bool]*                                                      | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `email`                                                               | *Optional[str]*                                                       | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `initial_setup_complete`                                              | *Optional[bool]*                                                      | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `news`                                                                | *Optional[bool]*                                                      | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `notifications`                                                       | list[[Notification](../../models/shared/notification.md)]             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `security_updates`                                                    | *Optional[bool]*                                                      | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `webhook_configs`                                                     | list[[WebhookConfigWrite](../../models/shared/webhookconfigwrite.md)] | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `workspace_id`                                                        | *str*                                                                 | :heavy_check_mark:                                                    | N/A                                                                   |

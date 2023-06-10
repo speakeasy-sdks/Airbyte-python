@@ -12,10 +12,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SourceDiscoverSchemaRead:
     r"""Returns the results of a discover catalog job. If the job was not successful, the catalog field will not be present. jobInfo will aways be present and its status be used to determine if the job was successful or not."""
-    
     job_info: shared_synchronousjobread.SynchronousJobRead = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('jobInfo') }})
     breaking_change: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('breakingChange'), 'exclude': lambda f: f is None }})
     catalog: Optional[shared_airbytecatalog.AirbyteCatalog] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('catalog'), 'exclude': lambda f: f is None }})
@@ -26,3 +26,4 @@ class SourceDiscoverSchemaRead:
     connection_status: Optional[shared_connectionstatus.ConnectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionStatus'), 'exclude': lambda f: f is None }})
     r"""Active means that data is flowing through the connection. Inactive means it is not. Deprecated means the connection is off and cannot be re-activated. the schema field describes the elements of the schema that will be synced."""
     
+

@@ -8,9 +8,9 @@ from ..shared import invalidinputexceptioninfo as shared_invalidinputexceptionin
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class CheckOperationResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     check_operation_read: Optional[shared_checkoperationread.CheckOperationRead] = dataclasses.field(default=None)
@@ -19,3 +19,4 @@ class CheckOperationResponse:
     r"""Input failed validation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

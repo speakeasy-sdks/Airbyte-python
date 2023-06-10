@@ -9,9 +9,9 @@ from ..shared import sourcedefinitionread as shared_sourcedefinitionread
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class UpdateSourceDefinitionResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
@@ -22,3 +22,4 @@ class UpdateSourceDefinitionResponse:
     source_definition_read: Optional[shared_sourcedefinitionread.SourceDefinitionRead] = dataclasses.field(default=None)
     r"""Successful operation"""
     
+
