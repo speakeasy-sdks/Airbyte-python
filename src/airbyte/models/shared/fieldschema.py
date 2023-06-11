@@ -8,4 +8,5 @@ import dataclasses
 @dataclasses.dataclass
 class FieldSchema:
     r"""JSONSchema representation of the field"""
-    pass
+    
+

@@ -8,4 +8,5 @@ import dataclasses
 @dataclasses.dataclass
 class StreamJSONSchema:
     r"""Stream schema using Json Schema specs."""
-    pass
+    
+

@@ -8,4 +8,5 @@ import dataclasses
 @dataclasses.dataclass
 class SourceDefinitionSpecification:
     r"""The specification for what values are required to configure the sourceDefinition."""
-    pass
+    
+
